@@ -4,9 +4,8 @@
 
 * {
   box-sizing: border-box;
-  /* outline: 1px solid red; */
 }
 
-body {
-  /* background: linear-gradient(180deg,  0%, # 100%); */
+.Typewriter{
+  display: inline-block;
 }

@@ -1,9 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-// import { FaLightbulb } from 'react-icons/fa';
-// import { FaLightbulbSlash } from 'react-icons/fa';
-import { BsFillLightbulbFill } from 'react-icons/bs';
-import { BsFillLightbulbOffFill } from 'react-icons/bs';
+import { BsFillLightbulbFill, BsFillLightbulbOffFill } from 'react-icons/bs';
 
 const Navbar = ({ theme, themeHandler }) => {
 
@@ -23,10 +20,10 @@ const Navbar = ({ theme, themeHandler }) => {
     );
 
   return (
-    <header className='py-3'>
+    <header>
       <nav className='text-myOrange'>
         {themeSwitch}
-        <ul className='flex justify-center uppercase font-bold'>
+        <ul className='flex text-xl justify-center uppercase font-bold bg-gradient-to-b from-myOrange to-slate-700 text-transparent bg-clip-text'>
           <li className='mx-5'>
             <Link href='/'>Home</Link>
           </li>
