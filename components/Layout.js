@@ -7,6 +7,10 @@ import { useTheme } from 'next-themes';
 const Layout = ({ children }) => {
   const { theme, setTheme } = useTheme();
 
+  const themeHandler = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark');
+  };
+
   return (
     <>
       <Head>
@@ -15,13 +19,7 @@ const Layout = ({ children }) => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <main className='bg-gradient-to-b from-stone-200 dark:from-darkBgTop'>
-        <Navbar />
-        <button
-          className='bg-gray'
-          onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-        >
-          Toggle
-        </button>
+        <Navbar theme={theme} themeHandler={themeHandler} />
         <section className='min-h-screen font-Roboto flex flex-col'>
           {children}
         </section>
