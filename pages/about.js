@@ -15,7 +15,7 @@ import {
   SiTailwindcss,
   SiStyledcomponents,
   SiVisualstudiocode,
-  SiFlask,
+  SiMongodb,
   SiTestinglibrary,
   SiFirebase,
 } from 'react-icons/si';
@@ -43,7 +43,7 @@ const about = () => {
           modern libraries like React and I have a basic understanding of
           backend frameworks like Flask and Express.
         </div>
-        <h1 className='text-9xl font-bold text-slate-600 opacity-50 mt-20'>
+        <h1 className='text-9xl font-bold text-white opacity-100  mt-20 mb-5 dark:text-slate-600 dark:opacity-50'>
           How did I get here?
         </h1>
         <div className='w-[50vw] text-center'>
@@ -52,7 +52,7 @@ const about = () => {
           am learning something new in this very moment. I love writing tidy,
           clean and reusable code and I enjoy re-creating pixel-perfect designs.
         </div>
-        <h1 className='text-9xl font-bold text-slate-600 opacity-50 mt-20'>
+        <h1 className='text-9xl font-bold text-white opacity-100  mt-20 mb-5 dark:text-slate-600 dark:opacity-50'>
           Get to know me
         </h1>
         <div className='w-[50vw] text-center'>
@@ -62,71 +62,70 @@ const about = () => {
           well with people. As you&apos;d expect from an Italian national, I
           make great pizzas too.
         </div>
-        <h1 className='text-9xl font-bold text-slate-600 opacity-50 mt-20'>
+        <h1 className='text-9xl font-bold text-white opacity-100  mt-20 mb-5 dark:text-slate-600 dark:opacity-50'>
           Tools under my belt
         </h1>
-        <div className='grid grid-cols-5 grid-rows-3 gap-20'>
+        <div className='grid grid-cols-5 grid-rows-3 gap-10'>
           <div className='flex flex-col items-center'>
-          <FaHtml5 size={50} />
-          <span>HTML</span>
+            <FaHtml5 size={50} />
+            <span>HTML</span>
           </div>
           <div className='flex flex-col items-center'>
-          <FaCss3 size={50} />
-          <span>CSS</span>
+            <FaCss3 size={50} />
+            <span>CSS</span>
           </div>
           <div className='flex flex-col items-center'>
-          <SiJavascript size={50} />
-          <span>JavaScript</span>
+            <SiJavascript size={50} />
+            <span>JavaScript</span>
           </div>
           <div className='flex flex-col items-center'>
-          <SiTypescript size={50} />
-          <span>TypeScript</span>
+            <SiTypescript size={50} />
+            <span>TypeScript</span>
           </div>
           <div className='flex flex-col items-center'>
-          <FaPython size={50} />
-          <span>Python</span>
+            <FaPython size={50} />
+            <span>Python</span>
           </div>
           <div className='flex flex-col items-center'>
-          <FaGitAlt size={50} />
-          <span>Git</span>
+            <FaGitAlt size={50} />
+            <span>Git</span>
           </div>
           <div className='flex flex-col items-center'>
-          <FaReact size={50} />
-          <span>React</span>
+            <FaReact size={50} />
+            <span>React</span>
           </div>
           <div className='flex flex-col items-center'>
-          <SiRedux size={50} />
-          <span>Redux</span>
+            <SiRedux size={50} />
+            <span>Redux</span>
           </div>
           <div className='flex flex-col items-center'>
-          <SiTestinglibrary size={50} />
-          <span>React Testing Library</span>
+            <SiTestinglibrary size={50} />
+            <span>React Testing Library</span>
           </div>
           <div className='flex flex-col items-center'>
-          <FaBootstrap size={50} />
-          <span>Bootstrap</span>
+            <FaBootstrap size={50} />
+            <span>Bootstrap</span>
           </div>
           <div className='flex flex-col items-center'>
-          <SiTailwindcss size={50} />
-          <span>Tailwind CSS</span>
+            <SiTailwindcss size={50} />
+            <span>Tailwind CSS</span>
           </div>
           <div className='flex flex-col items-center'>
-          <SiStyledcomponents size={50} />
-          <span>Styled Components</span>
+            <SiStyledcomponents size={50} />
+            <span>Styled Components</span>
           </div>
           <div className='flex flex-col items-center'>
-          <SiFirebase size={50} />
-          <span>Firebase</span>
+            <SiFirebase size={50} />
+            <span>Firebase</span>
           </div>
           <div className='flex flex-col items-center'>
-          <SiFlask size={50} />
-          <span>Flask</span>
+            <SiMongodb size={50} />
+            <span>MongoDB</span>
           </div>
           <div className='flex flex-col items-center'>
-          <SiVisualstudiocode size={50} />
-          <span>VS Code</span>
+            <SiVisualstudiocode size={50} />
+            <span>VS Code</span>
           </div>
-          
         </div>
       </div>
     </>

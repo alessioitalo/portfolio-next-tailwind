@@ -15,10 +15,13 @@ const Layout = ({ children }) => {
     <>
       <Head>
         <title>Alessio D&apos;Alise - Software Developer</title>
-        <meta name='description' content="Alessio Italo Junior D'Alise - Software Developer based in London, UK. "/>
+        <meta
+          name='description'
+          content="Alessio Italo Junior D'Alise - Software Developer based in London, UK. "
+        />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <main className='bg-gradient-to-b from-stone-200 dark:from-darkBgTop'>
+      <main className='bg-gradient-to-b from-stone-50 to-stone-300 dark:from-darkBgTop dark:to-darkBgBottom'>
         <Navbar theme={theme} themeHandler={themeHandler} />
         <section className='min-h-screen font-Roboto flex flex-col'>
           {children}

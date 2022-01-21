@@ -33,6 +33,9 @@ const Navbar = ({ theme, themeHandler }) => {
           <li className='mx-5'>
             <Link href='/about'>About</Link>
           </li>
+          <li className='mx-5'>
+            <Link href='/contact'>Contacts</Link>
+          </li>
         </ul>
       </nav>
     </header>

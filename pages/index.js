@@ -6,12 +6,12 @@ const writer = (
   <Typewriter
     options={{
       strings: [
-        'Web Development',
-        'React',
-        'Python',
-        'learning new cool stuff',
-        'Next JS',
-        'responsive designs',
+        'Web Development.',
+        'React.',
+        'Python.',
+        'learning new cool stuff.',
+        'Next JS.',
+        'responsive designs.',
       ],
       autoStart: true,
       loop: true,
