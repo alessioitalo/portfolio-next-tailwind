@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className='flex flex-col justify-center items-center py-10'>
+    <footer className='mx-20 flex flex-col justify-center items-center py-10 text-center'>
       <div className='text-sm'>
         Alessio Italo Jr. D&apos;Alise © {new Date().getFullYear()}
       </div>

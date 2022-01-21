@@ -22,18 +22,18 @@ const writer = (
 export default function Home() {
   return (
     <>
-      <div className='flex flex-col justify-around items-center h-[60vh] pt-40'>
-        <h1 className='text-8xl font-bold uppercase bg-gradient-to-b from-myOrange to-slate-700 text-transparent bg-clip-text'>
+      <div className='flex flex-col justify-around items-center h-[30vh] pt-40'>
+        <h1 className='text-4xl md:text-6xl lg:text-8xl font-bold uppercase bg-gradient-to-b from-myOrange to-slate-700 text-transparent bg-clip-text'>
           Hi, I am Alessio
         </h1>
-        <h4 className='text-2xl font-bold bg-gradient-to-b from-myOrange to-slate-700 text-transparent bg-clip-text relative bottom-10'>
+        <h4 className='text:lg md:text-2xl py-3 font-bold bg-gradient-to-b from-myOrange to-slate-700 text-transparent bg-clip-text'>
           ...and I love {writer}
         </h4>
       </div>
 
       <div className='flex flex-col justify-around items-center'>
 
-        <div className='flex justify-center text-myOrange min-w-full'>
+        <div className='flex justify-center text-myOrange min-w-full py-10'>
           <a
             href='https://www.linkedin.com/in/alessiodalise/'
             target='_blank'

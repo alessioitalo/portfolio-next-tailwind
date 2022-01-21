@@ -23,8 +23,8 @@ import {
 const about = () => {
   return (
     <>
-      <div className='flex flex-col justify-center items-center h-[60vh]'>
-        <h1 className='text-8xl font-bold uppercase bg-gradient-to-b from-myOrange to-slate-700 text-transparent bg-clip-text'>
+      <div className='flex flex-col justify-center items-center h-[30vh] md:h-[60vh]'>
+        <h1 className='text-4xl md:text-6xl lg:text-8xl font-bold uppercase bg-gradient-to-b from-myOrange to-slate-700 text-transparent bg-clip-text'>
           about me
         </h1>
       </div>
@@ -37,35 +37,35 @@ const about = () => {
           height={290}
           className='rounded-full'
         />
-        <div className='w-[50vw] text-center mt-20'>
+        <div className='w-[80vw] md:w-[50vw] text-center'>
           I am a web developer based in London, UK. I am proficient in HTML,
           CSS, Vanilla JavaScript and Python. I am comfortable working with
           modern libraries like React and I have a basic understanding of
           backend frameworks like Flask and Express.
         </div>
-        <h1 className='text-9xl font-bold text-white opacity-100  mt-20 mb-5 dark:text-slate-600 dark:opacity-50'>
+        <h1 className='text-5xl md:text-7xl lg:text-9xl text-center font-bold text-white opacity-100 dark:text-slate-600 dark:opacity-50'>
           How did I get here?
         </h1>
-        <div className='w-[50vw] text-center'>
+        <div className='w-[80vw] md:w-[50vw] text-center'>
           I am 100% self-taught. I spent countless hours on the best learning
           resources the web has to offer. There&apos;s actually a solid chance I
           am learning something new in this very moment. I love writing tidy,
           clean and reusable code and I enjoy re-creating pixel-perfect designs.
         </div>
-        <h1 className='text-9xl font-bold text-white opacity-100  mt-20 mb-5 dark:text-slate-600 dark:opacity-50'>
+        <h1 className='text-5xl md:text-7xl lg:text-9xl text-center font-bold text-white opacity-100  dark:text-slate-600 dark:opacity-50'>
           Get to know me
         </h1>
-        <div className='w-[50vw] text-center'>
+        <div className='w-[80vw] md:w-[50vw] text-center'>
           I have over 10 years of professional experience and a huge set of
           transferable skills I gained by working in customer-driven
           environments. I love working as a part of a team and I get along very
           well with people. As you&apos;d expect from an Italian national, I
           make great pizzas too.
         </div>
-        <h1 className='text-9xl font-bold text-white opacity-100  mt-20 mb-5 dark:text-slate-600 dark:opacity-50'>
+        <h1 className='text-5xl md:text-7xl lg:text-9xl text-center font-bold text-white opacity-100 dark:text-slate-600 dark:opacity-50'>
           Tools under my belt
         </h1>
-        <div className='grid grid-cols-5 grid-rows-3 gap-10'>
+        {/* <div className='grid grid-cols-5 grid-rows-3 gap-10'>
           <div className='flex flex-col items-center'>
             <FaHtml5 size={50} />
             <span>HTML</span>
@@ -126,7 +126,7 @@ const about = () => {
             <SiVisualstudiocode size={50} />
             <span>VS Code</span>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );
