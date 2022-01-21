@@ -38,11 +38,13 @@ const Layout = ({ children }) => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <main className='font-Roboto text-myOrange min-h-screen flex flex-col bg-gradient-to-b from-stone-50 to-stone-300 dark:from-darkBgTop dark:to-darkBgBottom'>
-        {themeSwitch}
-        <Navbar />
+      <main className='font-Roboto text-myOrange bg-gradient-to-b from-stone-50 to-stone-300 dark:from-darkBgTop dark:to-darkBgBottom'>
+        <header className='sticky top-0 z-50'>
+          {themeSwitch}
+          <Navbar />
+        </header>
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </main>
     </>
   );
