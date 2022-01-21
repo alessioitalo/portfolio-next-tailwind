@@ -1,35 +1,40 @@
 import React from 'react';
-import Image from 'next/image';
-import {
-  FaHtml5,
-  FaCss3,
-  FaPython,
-  FaReact,
-  FaGitAlt,
-  FaBootstrap,
-} from 'react-icons/fa';
-import {
-  SiTypescript,
-  SiJavascript,
-  SiRedux,
-  SiTailwindcss,
-  SiStyledcomponents,
-  SiVisualstudiocode,
-  SiMongodb,
-  SiTestinglibrary,
-  SiFirebase,
-} from 'react-icons/si';
+import Arrow from '../components/Arrow';
+// import Image from 'next/image';
+// import {
+//   FaHtml5,
+//   FaCss3,
+//   FaPython,
+//   FaReact,
+//   FaGitAlt,
+//   FaBootstrap,
+// } from 'react-icons/fa';
+// import {
+//   SiTypescript,
+//   SiJavascript,
+//   SiRedux,
+//   SiTailwindcss,
+//   SiStyledcomponents,
+//   SiVisualstudiocode,
+//   SiMongodb,
+//   SiTestinglibrary,
+//   SiFirebase,
+// } from 'react-icons/si';
 
 const about = () => {
   return (
+    <>
       <section className='flex flex-col justify-around items-center h-screen'>
-        <div className='text-center'>
-        <h1 className='relative bottom-40 text-4xl md:text-7xl lg:text-9xl uppercase font-bold bg-gradient-to-b from-myOrange to-slate-700 text-transparent bg-clip-text'>
+        <div className='flex flex-col justify-center items-center'>
+          <h1 className='relative bottom-20 text-4xl md:text-7xl lg:text-9xl uppercase font-bold bg-gradient-to-b from-myOrange to-slate-700 text-transparent bg-clip-text'>
             about me
           </h1>
+          <Arrow/>
+
         </div>
       </section>
-
+      <section></section>
+    </>
     //   <div className='flex flex-col justify-center items-center h-[30vh] md:h-[60vh]'>
     //     <h1 className='text-4xl md:text-6xl lg:text-8xl font-bold uppercase bg-gradient-to-b from-myOrange to-slate-700 text-transparent bg-clip-text'>
     //       about me
