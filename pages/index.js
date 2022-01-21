@@ -22,7 +22,45 @@ const writer = (
 export default function Home() {
   return (
     <>
-      <div className='flex flex-col justify-around items-center h-[30vh] pt-40'>
+      <section className='flex flex-col justify-around items-center h-screen'>
+        <div className='text-center'>
+          <h1 className='text-4xl md:text-7xl lg:text-9xl uppercase font-bold bg-gradient-to-b from-myOrange to-slate-700 text-transparent bg-clip-text'>
+            Hi, I am Alessio
+          </h1>
+          <h2 className='text-lg md:text-3xl lg:text-4xl font-bold bg-gradient-to-b from-myOrange to-slate-700 text-transparent bg-clip-text'>
+            {' '}
+            ...and I love {writer}
+          </h2>
+        </div>
+
+        <div className='flex'>
+          <a
+            href='https://www.linkedin.com/in/alessiodalise/'
+            target='_blank'
+            rel='noreferrer'
+            className='mx-4 hover:scale-125'
+          >
+            <BsLinkedin size={50} />
+          </a>
+          <a
+            href='https://github.com/alessioitalo'
+            target='_blank'
+            rel='noreferrer'
+            className='mx-4 hover:scale-125'
+          >
+            <BsGithub size={50} />
+          </a>
+          <a
+            href='https://twitter.com/alessioitalo'
+            target='_blank'
+            rel='noreferrer'
+            className='mx-4 hover:scale-125'
+          >
+            <BsTwitter size={50} />
+          </a>
+        </div>
+      </section>
+      {/* <div className='flex flex-col justify-around items-center h-[100vh] pt-40'>
         <h1 className='text-4xl md:text-6xl lg:text-8xl font-bold uppercase bg-gradient-to-b from-myOrange to-slate-700 text-transparent bg-clip-text'>
           Hi, I am Alessio
         </h1>
@@ -56,14 +94,12 @@ export default function Home() {
             className='mx-4 hover:scale-125'>
             <BsTwitter size={50} />
           </a>
-        </div>
-        {/* <Link href='/work' passHref>
+        </div> */}
+      {/* <Link href='/work' passHref>
           <div className='p-3 outline outline-myOrange bg-gradient-to-b from-myOrange to-slate-700 text-transparent bg-clip-text rounded font-Roboto uppercase font-bold hover:scale-125 cursor-pointer'>
             See my work 
           </div>
         </Link> */}
-
-      </div>
     </>
   );
 }

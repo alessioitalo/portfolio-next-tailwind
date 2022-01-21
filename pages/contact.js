@@ -2,11 +2,13 @@ import React from 'react';
 
 const contact = () => {
   return (
-    <div className='flex flex-col justify-center items-center h-[30vh] md:h-[60vh]'>
-      <h1 className='text-4xl md:text-6xl lg:text-8xl font-bold uppercase bg-gradient-to-b from-myOrange to-slate-700 text-transparent bg-clip-text'>
-        Contact Me
+    <section className='flex flex-col justify-around items-center h-screen'>
+    <div className='text-center'>
+    <h1 className='relative bottom-40 text-4xl md:text-7xl lg:text-9xl uppercase font-bold bg-gradient-to-b from-myOrange to-slate-700 text-transparent bg-clip-text'>
+        contact
       </h1>
     </div>
+  </section>
   );
 };
 
