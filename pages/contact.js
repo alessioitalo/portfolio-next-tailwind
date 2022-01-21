@@ -1,4 +1,5 @@
 import React from 'react';
+import Arrow from '../components/Arrow';
 
 const contact = () => {
   return (
