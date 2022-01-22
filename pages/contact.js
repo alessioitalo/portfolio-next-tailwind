@@ -10,7 +10,7 @@ const contact = () => {
     // </section>
 
     <div className='snap-y snap-mandatory overflow-scroll w-full h-screen no-scrollbar text-slate-700 dark:text-white'>
-      <section class='w-full h-screen snap-start'>
+      <section className='w-full h-screen snap-start'>
         <div className='flex flex-col justify-center items-center h-screen'>
           <h1 className='relative bottom-20 text-4xl md:text-7xl lg:text-9xl uppercase font-bold bg-gradient-to-b from-myOrange to-slate-700 text-transparent bg-clip-text'>
             contact me
@@ -18,15 +18,30 @@ const contact = () => {
           <Arrow />
         </div>
       </section>
-      <section class='w-full h-screen snap-start flex flex-col justify-around text-md lg:text-lg bg-gradient-to-b from-stone-50 to-stone-300 dark:from-darkBgTop dark:to-darkBgBottom'>
-        <form className='flex flex-col mx-10 sm:mx-60 py-10 px-20'>
+      <section className='w-full h-screen snap-start flex flex-col justify-around items-center text-md lg:text-lg bg-gradient-to-b from-stone-50 to-stone-300 dark:from-darkBgTop dark:to-darkBgBottom'>
+        <form className='flex flex-col w-[80vw] md:w-[60vw]'>
           <label htmlFor='name'>Your Name*</label>
-          <input name='name' type='text' required />
+          <input
+            className='mt-2 mb-5 text-myOrange rounded bg-transparent outline outline-1 py-1 px-4 outline-myOrange focus:outline-4'
+            name='name'
+            type='text'
+            required
+          />
           <label htmlFor='email'>Your Email*</label>
-          <input name='email' type='email' />
+          <input
+            className='mt-2 mb-5 text-myOrange rounded bg-transparent outline outline-1 py-1 px-4 outline-myOrange focus:outline-4'
+            name='email'
+            type='email'
+          />
           <label htmlFor='message'>Your Message*</label>
-          <textarea rows='14' name='message'></textarea>
-          <button className=' bg-gradient-to-b from-myOrange to-slate-700 rounded py-2 text-white uppercase'>Send</button>
+          <textarea
+            className='mt-2 mb-5 text-myOrange rounded bg-transparent outline outline-1 py-1 px-4 outline-myOrange focus:outline-4'
+            rows='14'
+            name='message'
+          ></textarea>
+          <button className=' bg-gradient-to-b from-myOrange to-slate-700 rounded py-2 text-white uppercase'>
+            Send
+          </button>
         </form>
       </section>
     </div>
