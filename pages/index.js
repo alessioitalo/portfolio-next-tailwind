@@ -40,7 +40,8 @@ export default function Home() {
             rel='noreferrer'
             className='mx-4 hover:scale-125'
           >
-            <BsLinkedin size={50} />
+            {/* <BsLinkedin size={50} className='clip-text transparent' style={{background:"linear-gradient(yellow, blue)", color:"transparent", backgroundClip:"text"}}/> */}
+            <BsLinkedin size={50}/>
           </a>
           <a
             href='https://github.com/alessioitalo'
