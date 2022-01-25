@@ -2,6 +2,7 @@
 import { BsGithub, BsLinkedin, BsTwitter } from 'react-icons/bs';
 import Typewriter from 'typewriter-effect';
 
+
 const writer = (
   <Typewriter
     options={{
@@ -41,7 +42,7 @@ export default function Home() {
             className='mx-4 hover:scale-125'
           >
             {/* <BsLinkedin size={50} className='clip-text transparent' style={{background:"linear-gradient(yellow, blue)", color:"transparent", backgroundClip:"text"}}/> */}
-            <BsLinkedin size={50}/>
+            <BsLinkedin size={50} />
           </a>
           <a
             href='https://github.com/alessioitalo'

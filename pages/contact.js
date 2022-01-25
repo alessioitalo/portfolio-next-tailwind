@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import emailjs from 'emailjs-com';
 import Arrow from '../components/Arrow';
 
 const contact = () => {
@@ -16,7 +17,7 @@ const contact = () => {
     }));
   };
 
-  const formSubmitHandler = (e) => {
+  const formSubmitHandler = async (e) => {
     e.preventDefault()
     console.log(formData)
   };
