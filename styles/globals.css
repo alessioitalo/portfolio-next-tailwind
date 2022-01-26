@@ -6,14 +6,6 @@
   box-sizing: border-box;
 }
 
-/* body{
-  margin: 0;
-  position: absolute;
-  inset: 0;
-  min-width: 100vw;
-  min-height: 100vh;
-} */
-
 .Typewriter {
   display: inline-block;
 }
@@ -27,4 +19,17 @@
 .no-scrollbar {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+}
+
+.activeLink{
+  animation: activeLink 0.2s linear;
+}
+
+@keyframes activeLink {
+  from{
+    width: 0px
+  }
+  to{
+    width: 100%;
+  }
 }

@@ -3,25 +3,37 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 const Navbar = () => {
-  const router = useRouter()
+  const router = useRouter();
   return (
     // <header>
-      <nav className='text-myOrange py-5'>
-        <ul className='hidden md:flex justify-self-center  text-xl justify-center uppercase font-bold bg-gradient-to-b from-myOrange to-slate-700 text-transparent bg-clip-text'>
-          <li className={`mx-5 ${router.pathname === '/' && 'bg-myOrange'}`}>
-            <Link href='/'>Home</Link>
-          </li>
-          <li className={`mx-5 ${router.pathname === '/work' && 'bg-myOrange'}`}>
-            <Link href='/work'>Portfolio</Link>
-          </li>
-          <li className={`mx-5 ${router.pathname === '/about' && 'bg-myOrange'}`}>
-            <Link href='/about'>About</Link>
-          </li>
-          <li className={`mx-5 ${router.pathname === '/contact' && 'bg-myOrange'}`}>
-            <Link href='/contact'>Contact Me</Link>
-          </li>
-        </ul>
-      </nav>
+    <nav className='text-myOrange py-5'>
+      <ul className='hidden md:flex justify-self-center  text-xl justify-center uppercase font-bold text-myOrange'>
+        <li className='mx-5'>
+          <Link href='/'>Home</Link>
+          {router.pathname === '/' && (
+            <div className='bg-myOrange w-full h-1 activeLink' />
+          )}
+        </li>
+        <li className='mx-5'>
+          <Link href='/work'>Portfolio</Link>
+          {router.pathname === '/work' && (
+            <div className='bg-myOrange w-full h-1 activeLink' />
+          )}
+        </li>
+        <li className='mx-5'>
+          <Link href='/about'>About</Link>
+          {router.pathname === '/about' && (
+            <div className='bg-myOrange w-full h-1 activeLink' />
+          )}
+        </li>
+        <li className='mx-5'>
+          <Link href='/contact'>Contact Me</Link>
+          {router.pathname === '/contact' && (
+            <div className='bg-myOrange w-full h-1 activeLink' />
+          )}
+        </li>
+      </ul>
+    </nav>
     // </header>
   );
 };

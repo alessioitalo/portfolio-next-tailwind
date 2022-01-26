@@ -22,7 +22,7 @@ const work = ({ items }) => {
     <div className='snap-y snap-mandatory overflow-scroll w-full h-screen no-scrollbar text-slate-700 dark:text-white'>
       <section className='w-full h-screen snap-start'>
       <div className='flex flex-col justify-center items-center h-screen'>
-          <h1 className='relative bottom-20 text-4xl md:text-7xl lg:text-9xl uppercase font-bold bg-gradient-to-b from-myOrange to-slate-700 text-transparent bg-clip-text'>
+      <h1 className='relative bottom-20 text-4xl md:text-7xl lg:text-9xl uppercase font-bold text-myOrange'>
             my work
           </h1>
           <Arrow />

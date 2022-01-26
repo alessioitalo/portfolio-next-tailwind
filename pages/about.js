@@ -5,15 +5,16 @@ import Skills from '../components/Skills';
 const aboutt = () => {
   return (
     <div className='snap-y snap-mandatory overflow-scroll w-full h-screen no-scrollbar text-slate-700 dark:text-white'>
-      <section class='w-full h-screen snap-start'>
+      <section className='w-full h-screen snap-start'>
         <div className='flex flex-col justify-center items-center h-screen'>
-          <h1 className='relative bottom-20 text-4xl md:text-7xl lg:text-9xl uppercase font-bold bg-gradient-to-b from-myOrange to-slate-700 text-transparent bg-clip-text'>
+        <h1 className='relative bottom-20 text-4xl md:text-7xl lg:text-9xl uppercase font-bold text-myOrange'>
+          {/* bg-gradient-to-b from-myOrange to-slate-700 text-transparent bg-clip-text */}
             about me
           </h1>
           <Arrow />
         </div>
       </section>
-      <section class='w-full h-screen snap-start flex flex-col justify-around text-md lg:text-lg'>
+      <section className='w-full h-screen snap-start flex flex-col justify-around text-md lg:text-lg'>
         <div className='text-center px-5 sm:px-8 md-px-10'>
           I am a web developer based in London, UK. I am proficient in HTML,
           CSS, Vanilla JavaScript and Python. I am comfortable working with
@@ -29,7 +30,7 @@ const aboutt = () => {
           and reusable code and I enjoy re-creating pixel-perfect designs.
         </div>
       </section>
-      <section class='w-full h-screen snap-start flex flex-col justify-around text-md lg:text-lg'>
+      <section className='w-full h-screen snap-start flex flex-col justify-around text-md lg:text-lg'>
         <div className='text-center'>
           <h1 className='font-bold text-2xl'>Get to know me</h1>I have over 10
           years of professional experience and a huge set of transferable skills

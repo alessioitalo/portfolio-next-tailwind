@@ -25,10 +25,10 @@ export default function Home() {
     <>
       <section className='flex flex-col justify-around items-center h-screen'>
         <div className='text-center'>
-          <h1 className='text-4xl md:text-7xl lg:text-9xl uppercase font-bold bg-gradient-to-b from-myOrange to-slate-700 text-transparent bg-clip-text'>
+        <h1 className='relative bottom-20 text-4xl md:text-7xl lg:text-9xl uppercase font-bold text-myOrange'>
             Hi, I am Alessio
           </h1>
-          <h2 className='text-lg md:text-3xl lg:text-4xl font-bold bg-gradient-to-b from-myOrange to-slate-700 text-transparent bg-clip-text'>
+          <h2 className='text-lg md:text-3xl lg:text-4xl font-bold my-Orange'>
             {' '}
             ...and I love {writer}
           </h2>

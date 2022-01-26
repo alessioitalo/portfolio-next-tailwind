@@ -18,22 +18,25 @@ const contact = () => {
   };
 
   const formSubmitHandler = async (e) => {
-    e.preventDefault()
-    console.log(formData)
+    e.preventDefault();
+    console.log(formData);
   };
 
   return (
     <div className='snap-y snap-mandatory overflow-scroll w-full h-screen no-scrollbar text-slate-700 dark:text-white'>
       <section className='w-full h-screen snap-start'>
         <div className='flex flex-col justify-center items-center h-screen'>
-          <h1 className='relative bottom-20 text-4xl md:text-7xl lg:text-9xl uppercase font-bold bg-gradient-to-b from-myOrange to-slate-700 text-transparent bg-clip-text'>
+        <h1 className='relative bottom-20 text-4xl md:text-7xl lg:text-9xl uppercase font-bold text-myOrange'>
             contact me
           </h1>
           <Arrow />
         </div>
       </section>
       <section className='w-full h-screen snap-start flex flex-col justify-around items-center text-md lg:text-lg bg-gradient-to-b from-stone-50 to-stone-300 dark:from-darkBgTop dark:to-darkBgBottom'>
-        <form className='flex flex-col w-[80vw] md:w-[60vw]' onSubmit={formSubmitHandler}>
+        <form
+          className='flex flex-col w-[80vw] md:w-[60vw]'
+          onSubmit={formSubmitHandler}
+        >
           <label htmlFor='name'>Your Name*</label>
           <input
             className='mt-2 mb-5 text-myOrange rounded bg-transparent outline outline-1 py-1 px-4 outline-myOrange focus:outline-4'
