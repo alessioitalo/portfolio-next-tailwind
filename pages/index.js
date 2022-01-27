@@ -3,10 +3,10 @@ import { BsGithub, BsLinkedin, BsTwitter } from 'react-icons/bs';
 
 export default function Home() {
   return (
-    <section className='flex flex-col justify-center items-center mt-12'>
+    <section className='flex flex-col justify-center items-center mt-12 relative z-1'>
       <div className='w-[90vw]'>
         <h4 className='text-orange-600 uppercase font-bold text-md sm:text-xl xl:text-2xl py-1'>
-          alessio italo junior d'alise
+          alessio italo junior D&apos;Alise
         </h4>
         <h1 className='text-orange-600 uppercase font-bold text-4xl sm:text-6xl xl:text-8xl leading-[3.5rem]'>
           frontend
@@ -33,7 +33,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className='flex justify-center md:justify-end py-10'>
+        <div className='flex justify-end py-10'>
           <a
             href='https://www.linkedin.com/in/alessiodalise/'
             target='_blank'
