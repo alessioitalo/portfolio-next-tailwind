@@ -13,7 +13,7 @@ export default function Home() {
           <br />
           <span className='text-5xl sm:text-7xl xl:text-9xl'>developer</span>
         </h1>
-        <p className='text-slate-900 dark:text-stone-50 text-bold text-sm sm:text-md xl:text-xl py-4'>
+        <p className='font-ubuntu text-slate-900 dark:text-stone-50 text-bold text-sm sm:text-md xl:text-xl py-4'>
           I am a self-taught web developer based in{' '}
           <span className='text-orange-600 font-bold'>London</span>, and I am
           proficient in <span className='text-orange-600 font-bold'>HTML</span>,{' '}
@@ -21,19 +21,19 @@ export default function Home() {
           <span className='text-orange-600 font-bold'>JavaScript</span> and{' '}
           <span className='text-orange-600 font-bold'>Python</span>.
         </p>
-        <p className='text-slate-900 dark:text-stone-50 text-bold text-sm sm:text-md xl:text-xl py-4'>
+        <p className='font-ubuntu text-slate-900 dark:text-stone-50 text-bold text-sm sm:text-md xl:text-xl py-4'>
           Some of my favourite technologies are
           <span className='text-orange-600 font-bold'> React</span>,{' '}
           <span className='text-orange-600 font-bold'>NextJS</span>,{' '}
           <span className='text-orange-600 font-bold'>TailwindCSS</span>.
         </p>
         <div className='flex-flex-col py-4'>
-          <div className='flex justify-start py-10 text-xl sm:text-2xl xl:text-3xl md top-8 font-bold uppercase underline'>
+          <div className='font-ubuntu flex justify-start py-10 text-xl sm:text-2xl xl:text-3xl md top-8 font-bold uppercase underline'>
             <Link href='/work'>see my work</Link>
           </div>
         </div>
 
-        <div className='flex justify-center md:justify-end py-10 md:px-32'>
+        <div className='flex justify-center md:justify-end py-10'>
           <a
             href='https://www.linkedin.com/in/alessiodalise/'
             target='_blank'

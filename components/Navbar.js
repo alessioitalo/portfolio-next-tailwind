@@ -6,7 +6,7 @@ const Navbar = () => {
   const router = useRouter();
   return (
     // <header>
-    <nav className='text-orange-600 py-5'>
+    <nav className='text-orange-600 py-5 font-ubuntu'>
       <ul className='hidden md:flex justify-self-center text-xl justify-center uppercase text-orange-600'>
         <li className='mx-5'>
           <Link href='/'>Home</Link>
