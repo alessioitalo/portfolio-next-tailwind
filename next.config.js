@@ -1,6 +1,6 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ['i.picsum.photos'],
+    domains: ['firebasestorage.googleapis.com'],
   },
 };

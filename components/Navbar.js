@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     // <header>
     <nav className='text-orange-600 py-5'>
-      <ul className='hidden md:flex justify-self-center text-xl justify-center uppercase font-bold text-orange-600'>
+      <ul className='hidden md:flex justify-self-center text-xl justify-center uppercase text-orange-600'>
         <li className='mx-5'>
           <Link href='/'>Home</Link>
           {router.pathname === '/' && (

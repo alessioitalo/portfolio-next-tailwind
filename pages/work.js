@@ -20,7 +20,7 @@ const work = ({ items }) => {
 
   return (
     <div className='snap-y snap-mandatory overflow-scroll w-full h-screen no-scrollbar'>
-      <section className='w-full h-screen snap-start'>
+      <section className='snap-start'>
       <div className='flex flex-col justify-center items-center h-screen'>
       <h1 className='relative bottom-20 text-4xl md:text-7xl lg:text-9xl uppercase font-bold text-orange-600'>
             my work

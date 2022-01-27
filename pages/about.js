@@ -2,10 +2,10 @@ import React from 'react';
 import Arrow from '../components/Arrow';
 import Skills from '../components/Skills';
 
-const aboutt = () => {
+const about = () => {
   return (
-    <div className='snap-y snap-mandatory overflow-scroll w-full h-screen no-scrollbar text-slate-700 dark:text-white'>
-      <section className='w-full h-screen snap-start'>
+    <div className='snap-y snap-mandatory overflow-scroll w-full h-screen no-scrollbar'>
+      <section className='snap-start'>
         <div className='flex flex-col justify-center items-center h-screen'>
         <h1 className='relative bottom-20 text-4xl md:text-7xl lg:text-9xl uppercase font-bold text-orange-600'>
           {/* bg-gradient-to-b from-orange-600 to-slate-700 text-transparent bg-clip-text */}
@@ -49,4 +49,4 @@ const aboutt = () => {
   );
 };
 
-export default aboutt;
+export default about;

@@ -23,7 +23,7 @@ const contact = () => {
   };
 
   return (
-    <div className='snap-y snap-mandatory overflow-scroll w-full h-screen no-scrollbar text-slate-700 dark:text-white'>
+    <div className='snap-y snap-mandatory overflow-scroll w-full no-scrollbar text-slate-700 dark:text-white'>
       <section className='w-full h-screen snap-start'>
         <div className='flex flex-col justify-center items-center h-screen'>
         <h1 className='relative bottom-20 text-4xl md:text-7xl lg:text-9xl uppercase font-bold text-orange-600'>
