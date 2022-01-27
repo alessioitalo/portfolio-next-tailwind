@@ -38,7 +38,7 @@ const Layout = ({ children }) => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <main className='font-Roboto text-myOrange bg-gradient-to-b from-stone-50 to-stone-300 dark:from-darkBgTop dark:to-darkBgBottom'>
+      <main className='text-orange-600 bg-stone-50 dark:bg-slate-900'>
         <header className='sticky top-0 z-50'>
           {themeSwitch}
           <Navbar />
