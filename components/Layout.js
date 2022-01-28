@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from './Navbar';
-import Footer from './Footer';
+// import Footer from './Footer';
 import Head from 'next/head';
 import { useTheme } from 'next-themes';
 import { BsFillLightbulbFill, BsFillLightbulbOffFill } from 'react-icons/bs';
@@ -19,13 +19,13 @@ const Layout = ({ children }) => {
     theme === 'dark' ? (
       <BsFillLightbulbFill
         onClick={themeHandler}
-        className='cursor-pointer absolute absolute mt-5 ml-5'
+        className='cursor-pointer fixed top-5 left-5'
         size={30}
       />
     ) : (
       <BsFillLightbulbOffFill
         onClick={themeHandler}
-        className='cursor-pointer absolute top-5 left-5'
+        className='cursor-pointer fixed top-5 left-5'
         size={30}
       />
     );
@@ -40,9 +40,9 @@ const Layout = ({ children }) => {
         />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      {/* <main className='text-orange-600 bg-stone-100 dark:bg-slate-800 bg-cover bg-no-repeat h-screen relative'> */}
-      <main className='text-orange-600 bg-stone-100 dark:bg-slate-800 h-screen bg-light dark:bg-dark bg-bottom bg-cover bg-no-repeat'>
-        <header className='sticky top-0 z-20 w-full '>
+      <div className='fixed inset-0 w-screen h-screen bg-stone-100 dark:bg-slate-800 bg-light dark:bg-dark bg-bottom bg-cover bg-no-repeat -z-10' />
+      <main className='text-orange-600'>
+        <header className='fixed top-0 z-20 w-full '>
           {themeSwitch}
           <Navbar showMobile={showMobile} setShowMobile={setShowMobile} />
         </header>
@@ -51,7 +51,6 @@ const Layout = ({ children }) => {
         {children}
       </main>
       {/* <Footer /> */}
-
     </>
   );
 };

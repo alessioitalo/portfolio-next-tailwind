@@ -4,10 +4,12 @@ import Skills from '../components/Skills';
 
 const about = () => {
   return (
-    <div className='snap-y snap-mandatory overflow-scroll w-full h-screen no-scrollbar'>
-      <section className='snap-start'>
+    // <div className='w-full h-screen snap-y snap-mandatory overflow-scroll no-scrollbar '>
+    //   <section className='snap-start h-screen'>
+    <>
+      <section className='h-screen'>
         <div className='flex flex-col justify-center items-center h-screen'>
-        <h1 className='relative bottom-20 text-4xl md:text-7xl lg:text-9xl uppercase font-bold text-orange-600'>
+          <h1 className='relative bottom-20 text-4xl md:text-7xl lg:text-9xl uppercase font-bold'>
             about me
           </h1>
           <Arrow />
@@ -44,7 +46,7 @@ const about = () => {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 };
 

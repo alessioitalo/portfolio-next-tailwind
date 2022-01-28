@@ -17,13 +17,11 @@ export async function getStaticProps() {
 }
 
 const work = ({ items }) => {
-  // console.log(items);
-
   return (
-    <div className='snap-y snap-mandatory overflow-scroll w-full h-screen no-scrollbar'>
-      <section className='snap-start'>
+    <>
+      <section className='h-screen'>
         <div className='flex flex-col justify-center items-center h-screen'>
-          <h1 className='relative bottom-20 text-4xl md:text-7xl lg:text-9xl uppercase font-bold text-orange-600'>
+          <h1 className='relative bottom-20 text-4xl md:text-7xl lg:text-9xl uppercase font-bold '>
             my work
           </h1>
           <Arrow />
@@ -33,18 +31,16 @@ const work = ({ items }) => {
       {items.map((item) => (
         <section
           key={item.id}
-          className='py-44 sm:py-36 md:py-20 snap-start w-full h-full font-ubuntu font-bold text-center'
+          className='sm:py-36 md:py-20 snap-start w-full h-full font-ubuntu font-bold text-center'
         >
           <h1 className='text-slate-800 dark:text-stone-50 opacity-20 py-10 md:py-1 text-3xl md:text-6xl lg:text-9xl uppercase font-bold '>
             {item.data.name}
           </h1>
-          <div className='w-[90vw] h-[20vh] sm:h-[30vh] md:w-[60vw] md:h-[60vh] relative mx-auto fill-current'>
+          <div className='w-[90vw] h-[25vh] relative mx-auto fill-current'>
             <Image
               src={item.data.img}
               layout='responsive'
               layout='fill'
-              // width={200}
-              // height={200}
               objectFit='cover'
               className='rounded'
             />
@@ -59,7 +55,7 @@ const work = ({ items }) => {
           <a href={item.data.live}>Live App</a>
         </section>
       ))}
-    </div>
+    </>
   );
 };
 
