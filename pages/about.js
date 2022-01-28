@@ -8,7 +8,6 @@ const about = () => {
       <section className='snap-start'>
         <div className='flex flex-col justify-center items-center h-screen'>
         <h1 className='relative bottom-20 text-4xl md:text-7xl lg:text-9xl uppercase font-bold text-orange-600'>
-          {/* bg-gradient-to-b from-orange-600 to-slate-700 text-transparent bg-clip-text */}
             about me
           </h1>
           <Arrow />
@@ -41,7 +40,7 @@ const about = () => {
         <div>
           <div className='text-center'>
             <h1 className='font-bold text-2xl'>Tools under my belt</h1>
-            <Skills />
+            {/* <Skills /> */}
           </div>
         </div>
       </section>

@@ -2,6 +2,7 @@ import React from 'react';
 import Arrow from '../components/Arrow';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../firebase.config';
+import Image from 'next/image';
 
 export async function getStaticProps() {
   let items = [];
@@ -21,8 +22,8 @@ const work = ({ items }) => {
   return (
     <div className='snap-y snap-mandatory overflow-scroll w-full h-screen no-scrollbar'>
       <section className='snap-start'>
-      <div className='flex flex-col justify-center items-center h-screen'>
-      <h1 className='relative bottom-20 text-4xl md:text-7xl lg:text-9xl uppercase font-bold text-orange-600'>
+        <div className='flex flex-col justify-center items-center h-screen'>
+          <h1 className='relative bottom-20 text-4xl md:text-7xl lg:text-9xl uppercase font-bold text-orange-600'>
             my work
           </h1>
           <Arrow />
@@ -30,8 +31,32 @@ const work = ({ items }) => {
       </section>
 
       {items.map((item) => (
-        <section key={item.id} className='py-60 snap-start w-full h-screen '>
-          {item.data.source}
+        <section
+          key={item.id}
+          className='py-44 sm:py-36 md:py-20 snap-start w-full h-full font-ubuntu font-bold text-center'
+        >
+          <h1 className='text-slate-800 dark:text-stone-50 opacity-20 py-10 md:py-1 text-3xl md:text-6xl lg:text-9xl uppercase font-bold '>
+            {item.data.name}
+          </h1>
+          <div className='w-[90vw] h-[20vh] sm:h-[30vh] md:w-[60vw] md:h-[60vh] relative mx-auto fill-current'>
+            <Image
+              src={item.data.img}
+              layout='responsive'
+              layout='fill'
+              // width={200}
+              // height={200}
+              objectFit='cover'
+              className='rounded'
+            />
+          </div>
+          <p className='p-10 md:px10 md:px-4'>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+          <a href={item.data.source}>Source code</a>
+          <a href={item.data.live}>Live App</a>
         </section>
       ))}
     </div>
