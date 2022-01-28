@@ -3,6 +3,7 @@ import Arrow from '../components/Arrow';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../firebase.config';
 import Image from 'next/image';
+import FullScreenWrapper from '../components/FullScreenWrapper';
 
 export async function getStaticProps() {
   let items = [];
@@ -19,41 +20,43 @@ export async function getStaticProps() {
 const work = ({ items }) => {
   return (
     <>
-      <section className='h-screen'>
+      <FullScreenWrapper className='h-screen'>
         <div className='flex flex-col justify-center items-center h-screen'>
           <h1 className='relative bottom-20 text-4xl md:text-7xl lg:text-9xl uppercase font-bold '>
             my work
           </h1>
           <Arrow />
         </div>
-      </section>
+      </FullScreenWrapper>
 
       {items.map((item) => (
-        <section
+        <FullScreenWrapper
           key={item.id}
-          className='sm:py-36 md:py-20 snap-start w-full h-full font-ubuntu font-bold text-center'
+          // className='sm:py-36 md:py-20 snap-start h-full font-ubuntu font-bold text-center'
         >
-          <h1 className='text-slate-800 dark:text-stone-50 opacity-20 py-10 md:py-1 text-3xl md:text-6xl lg:text-9xl uppercase font-bold '>
-            {item.data.name}
-          </h1>
-          <div className='w-[90vw] h-[25vh] relative mx-auto fill-current'>
-            <Image
-              src={item.data.img}
-              layout='responsive'
-              layout='fill'
-              objectFit='cover'
-              className='rounded'
-            />
+          <div className='sm:py-36 md:py-20 snap-start h-full font-ubuntu font-bold text-center'>
+            <h1 className='text-slate-800 dark:text-stone-50 opacity-20 py-10 md:py-1 text-3xl md:text-6xl lg:text-9xl uppercase font-bold '>
+              {item.data.name}
+            </h1>
+            <div className='w-[90vw] h-[25vh] relative mx-auto fill-current'>
+              <Image
+                src={item.data.img}
+                layout='responsive'
+                layout='fill'
+                objectFit='cover'
+                className='rounded'
+              />
+            </div>
+            <p className='p-10 md:px10 md:px-4'>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <a href={item.data.source}>Source code</a>
+            <a href={item.data.live}>Live App</a>
           </div>
-          <p className='p-10 md:px10 md:px-4'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
-          <a href={item.data.source}>Source code</a>
-          <a href={item.data.live}>Live App</a>
-        </section>
+        </FullScreenWrapper>
       ))}
     </>
   );

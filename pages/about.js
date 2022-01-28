@@ -1,21 +1,22 @@
 import React from 'react';
 import Arrow from '../components/Arrow';
 import Skills from '../components/Skills';
+import FullScreenWrapper from '../components/FullScreenWrapper';
 
 const about = () => {
   return (
     // <div className='w-full h-screen snap-y snap-mandatory overflow-scroll no-scrollbar '>
     //   <section className='snap-start h-screen'>
     <>
-      <section className='h-screen'>
+      <FullScreenWrapper className='h-screen'>
         <div className='flex flex-col justify-center items-center h-screen'>
           <h1 className='relative bottom-20 text-4xl md:text-7xl lg:text-9xl uppercase font-bold'>
             about me
           </h1>
           <Arrow />
         </div>
-      </section>
-      <section className='w-full h-screen snap-start flex flex-col justify-around text-md lg:text-lg'>
+      </FullScreenWrapper>
+      <FullScreenWrapper>
         <div className='text-center px-5 sm:px-8 md-px-10'>
           I am a web developer based in London, UK. I am proficient in HTML,
           CSS, Vanilla JavaScript and Python. I am comfortable working with
@@ -30,8 +31,8 @@ const about = () => {
           learning something new in this very moment. I love writing tidy, clean
           and reusable code and I enjoy re-creating pixel-perfect designs.
         </div>
-      </section>
-      <section className='w-full h-screen snap-start flex flex-col justify-around text-md lg:text-lg'>
+      </FullScreenWrapper>
+      <FullScreenWrapper>
         <div className='text-center'>
           <h1 className='font-bold text-2xl'>Get to know me</h1>I have over 10
           years of professional experience and a huge set of transferable skills
@@ -45,7 +46,7 @@ const about = () => {
             {/* <Skills /> */}
           </div>
         </div>
-      </section>
+      </FullScreenWrapper>
     </>
   );
 };

@@ -4,8 +4,8 @@ import { BsGithub, BsLinkedin, BsTwitter } from 'react-icons/bs';
 
 export default function Home() {
   return (
-    <section className='flex flex-col justify-center items-center mt-12 relative z-1'>
-      <div className='w-[90vw]'>
+    <section className='flex flex-col justify-center items-center mt-12 relative h-[80vh]'>
+      <div className='w-[90vw] mt-28'>
         <h4 className='text-orange-600 uppercase font-bold text-md sm:text-xl xl:text-2xl py-1'>
           alessio italo junior D&apos;Alise
         </h4>
@@ -29,7 +29,7 @@ export default function Home() {
           <span className='text-orange-600 font-bold'>TailwindCSS</span>.
         </p>
         <div className='flex-flex-col py-4'>
-          <div className='font-ubuntu flex justify-start py-10 text-xl sm:text-2xl xl:text-3xl md top-8 font-bold uppercase underline'>
+          <div className='font-ubuntu flex flex-col justify-start py-10 text-xl sm:text-2xl xl:text-3xl md top-8 font-bold uppercase underline'>
             <Link href='/work'>
               <div className='animate-pulse'>see my work</div>
             </Link>
