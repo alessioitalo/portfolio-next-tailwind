@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useState } from 'react';
+// import { useState } from 'react';
 // import MobileNavbar from './MobileNavbar';
+// import wave from '../public/wave-light.svg'
 
 const Navbar = ({showMobile, setShowMobile}) => {
   const router = useRouter();

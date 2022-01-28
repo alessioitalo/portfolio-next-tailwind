@@ -41,7 +41,7 @@ const Layout = ({ children }) => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       {/* <main className='text-orange-600 bg-stone-100 dark:bg-slate-800 bg-cover bg-no-repeat h-screen relative'> */}
-      <main className='text-orange-600 bg-stone-100 dark:bg-slate-800 h-screen'>
+      <main className='text-orange-600 bg-stone-100 dark:bg-slate-800 h-screen bg-light dark:bg-dark bg-bottom bg-no-repeat'>
         <header className='sticky top-0 z-20 w-full '>
           {themeSwitch}
           <Navbar showMobile={showMobile} setShowMobile={setShowMobile} />
