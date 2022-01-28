@@ -7,10 +7,6 @@
   box-sizing: border-box;
 }
 
-.Typewriter {
-  display: inline-block;
-}
-
 /* Hide scrollbar for Chrome, Safari and Opera */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
@@ -20,42 +16,6 @@
 .no-scrollbar {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
-}
-
-#visual path:nth-of-type(1),
-#visual path:nth-of-type(3),
-#visual path:nth-of-type(5) {
-  animation: path-one 6s linear infinite;
-}
-
-#visual path:nth-of-type(2),
-#visual path:nth-of-type(4),
-#visual path:nth-of-type(6) {
-  animation: path-two 6s linear infinite;
-}
-
-@keyframes path-one {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-4px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-@keyframes path-two {
-  0%,
-  50%,
-  100% {
-    transform: translateY(4px);
-  }
-  25%,
-  75% {
-    transform: translateY(0px);
-  }
 }
 
 .activeLink {

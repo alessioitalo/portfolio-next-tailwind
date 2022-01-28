@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Arrow from '../components/Arrow';
 import { BsGithub, BsLinkedin, BsTwitter } from 'react-icons/bs';
 
 export default function Home() {
@@ -29,7 +30,9 @@ export default function Home() {
         </p>
         <div className='flex-flex-col py-4'>
           <div className='font-ubuntu flex justify-start py-10 text-xl sm:text-2xl xl:text-3xl md top-8 font-bold uppercase underline'>
-            <Link href='/work'>see my work</Link>
+            <Link href='/work'>
+              <div className='animate-pulse'>see my work</div>
+            </Link>
           </div>
         </div>
 

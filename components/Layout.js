@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import Head from 'next/head';
 import { useTheme } from 'next-themes';
 import { BsFillLightbulbFill, BsFillLightbulbOffFill } from 'react-icons/bs';
+import MobileNav from './MobileNav';
 
 const Layout = ({ children }) => {
   const { theme, setTheme } = useTheme();
@@ -39,8 +40,7 @@ const Layout = ({ children }) => {
       </Head>
       {/* <main className='text-orange-600 bg-stone-100 dark:bg-slate-800 bg-cover bg-no-repeat h-screen relative'> */}
         <main className='text-orange-600 bg-stone-100 dark:bg-slate-800 h-screen'>
-       
-        <header className='sticky top-0 z-50'>
+        <header className='sticky top-0 z-50 w-screen'>
           {themeSwitch}
           <Navbar />
         </header>
