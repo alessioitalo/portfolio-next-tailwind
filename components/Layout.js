@@ -4,8 +4,9 @@ import Head from 'next/head';
 import { useTheme } from 'next-themes';
 import { BsFillLightbulbFill, BsFillLightbulbOffFill } from 'react-icons/bs';
 import MobileNavbar from './MobileNavbar';
+import Loading from './Loading';
 
-const Layout = ({ children }) => {
+const Layout = ({ loading, children }) => {
   const { theme, setTheme } = useTheme();
 
   const [showMobile, setShowMobile] = useState(false);
@@ -29,6 +30,7 @@ const Layout = ({ children }) => {
       />
     );
 
+
   return (
     <>
       <Head>
@@ -40,7 +42,8 @@ const Layout = ({ children }) => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <div className='fixed inset-0 w-screen h-screen bg-stone-100 dark:bg-slate-800 bg-light dark:bg-dark bg-bottom bg-cover bg-no-repeat -z-10' />
-      <main className='text-orange-600'>
+      {loading && <Loading />}
+      <main className={`text-orange-600 ${loading && 'blur-sm'}`}>
         <header className='fixed top-0 z-20 w-full '>
           {themeSwitch}
           <Navbar showMobile={showMobile} setShowMobile={setShowMobile} />
