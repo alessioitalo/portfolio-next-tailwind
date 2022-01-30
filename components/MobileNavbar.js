@@ -5,12 +5,12 @@ const MobileNavbar = ({ showMobile, setShowMobile }) => {
   const router = useRouter();
   return (
     <div
-      className={`visible md:hidden font-ubuntu  text-xl w-full h-[40vh] fixed inset-0 z-10  ${
+      className={`visible md:hidden  fixed inset-0 z-10 ${
         showMobile ? 'navVisible' : 'navHidden'
       }`}
     >
-      <ul className='bg-stone-200 dark:bg-slate-900 flex flex-col items-center rounded-b-lg shadow-xl text-2xl uppercase py-10'>
-        <li
+      <ul className=' bg-stone-100 dark:bg-slate-800 font-ubuntu text-4xl flex flex-col justify-center items-center h-screen text-orange-600 uppercase'>
+        <li 
           className={`py-4 ${
             router.pathname === '/' && 'underline decoration-4'
           }`}

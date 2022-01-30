@@ -4,8 +4,8 @@ import { BsGithub, BsLinkedin, BsTwitter } from 'react-icons/bs';
 
 export default function Home() {
   return (
-    <section className='flex flex-col justify-center items-center mt-12 relative h-[80vh]'>
-      <div className='w-[90vw] mt-28'>
+    <section className='flex flex-col items-center mt-12 relative h-[80vh]'>
+      <div className='w-[90vw] mt-20'>
         <h4 className='text-orange-600 uppercase font-bold text-md sm:text-xl xl:text-2xl py-1'>
           alessio italo junior D&apos;Alise
         </h4>
