@@ -4,7 +4,7 @@ import { BsGithub, BsLinkedin, BsTwitter } from 'react-icons/bs';
 
 export default function Home() {
   return (
-    <section className='flex flex-col items-center mt-12 relative h-[80vh]'>
+    <section className='flex flex-col items-center relative h-[80vh]'>
       <div className='w-[90vw] mt-20'>
         <h4 className='text-orange-600 uppercase font-bold text-md sm:text-xl xl:text-2xl py-1'>
           alessio italo junior D&apos;Alise
@@ -14,7 +14,7 @@ export default function Home() {
           <br />
           <span className='text-5xl sm:text-7xl xl:text-9xl'>developer</span>
         </h1>
-        <p className='font-ubuntu text-slate-900 dark:text-stone-50 text-bold text-sm sm:text-md xl:text-xl py-4'>
+        <p className='font-ubuntu text-slate-900 dark:text-stone-50 text-bold text-sm sm:text-md xl:text-xl m-4'>
           I am a self-taught web developer based in{' '}
           <span className='text-orange-600 font-bold'>London</span>, and I am
           proficient in <span className='text-orange-600 font-bold'>HTML</span>,{' '}

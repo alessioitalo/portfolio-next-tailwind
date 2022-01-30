@@ -9,7 +9,7 @@ const Navbar = ({showMobile, setShowMobile}) => {
   // const [showMobile, setShowMobile] = useState(false);
 
   return (
-    <nav className='text-orange-600 py-5 font-ubuntu'>
+    <nav className='text-orange-600 py-5 font-ubuntu fixed inset-0'> 
       <ul className='hidden md:flex text-xl justify-center uppercase text-orange-600'>
         <li className='mx-5'>
           <Link href='/'>Home</Link>

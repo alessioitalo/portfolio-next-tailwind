@@ -43,7 +43,8 @@ const Layout = ({ loading, children }) => {
       </Head>
       <div className='fixed inset-0 w-screen h-screen bg-stone-100 dark:bg-slate-800 bg-light dark:bg-dark bg-bottom bg-cover bg-no-repeat -z-10' />
       {loading && <Loading />}
-      <main className={`text-orange-600 ${loading && 'blur-sm'}`}>
+      {/* <Loading /> */}
+      <main className={`text-orange-600 ${loading && 'blur-sm h-screen'}`}>
         <header className='fixed top-0 z-20 w-full '>
           {themeSwitch}
           <Navbar showMobile={showMobile} setShowMobile={setShowMobile} />
