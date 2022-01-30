@@ -19,13 +19,13 @@ const Layout = ({ loading, children }) => {
     theme === 'dark' ? (
       <BsFillLightbulbFill
         onClick={themeHandler}
-        className='cursor-pointer fixed top-5 left-5'
+        className='cursor-pointer fixed top-5 right-20'
         size={30}
       />
     ) : (
       <BsFillLightbulbOffFill
         onClick={themeHandler}
-        className='cursor-pointer fixed top-5 left-5'
+        className='cursor-pointer fixed top-5 right-20'
         size={30}
       />
     );
