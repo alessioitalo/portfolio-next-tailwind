@@ -22,8 +22,10 @@ export default function Home() {
           </h1>
         </motion.div>
         <motion.div
-          initial={{ visibility: 'hidden', x: '100vw' }}
-          animate={{ visibility: 'visible', x: 0 }}
+          // initial={{ visibility: 'hidden', x: '100vw' }}
+          // animate={{ visibility: 'visible', x: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ delay: 0.8, duration: 0.5 }}
         >
           <p className='font-ubuntu text-slate-900 dark:text-stone-50 text-bold text-sm sm:text-md xl:text-xl py-2'>
@@ -51,9 +53,11 @@ export default function Home() {
         </motion.div>
 
         <motion.div
-          initial={{ visibility: 'hidden', x: '-100vw' }}
-          animate={{ visibility: 'visible', x: 0 }}
-          transition={{ delay: 0.8, duration: 0.5 }}
+          // initial={{ visibility: 'hidden', x: '-100vw' }}
+          // animate={{ visibility: 'visible', x: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1, duration: 0.5 }}
           className='flex justify-end justify-self-end'
         >
           <a
