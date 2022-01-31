@@ -6,12 +6,11 @@ import { motion } from 'framer-motion';
 export default function Home() {
   return (
     <section className='flex flex-col items-center relative h-[80vh]'>
-      <div className='w-[90vw] mt-20'>
+      <div className='w-[90vw] mt-20 overflow-hidden'>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
-          className='overflow-hidden'
         >
           <h4 className='text-orange-600 uppercase font-bold text-md sm:text-xl xl:text-2xl py-1'>
             alessio italo junior D&apos;Alise
@@ -26,7 +25,6 @@ export default function Home() {
           initial={{ x: '100vw' }}
           animate={{ x: 0 }}
           transition={{ delay: 0.8, duration: 0.5 }}
-          className='overflow-hidden'
         >
           <p className='font-ubuntu text-slate-900 dark:text-stone-50 text-bold text-sm sm:text-md xl:text-xl py-2'>
             I am a self-taught web developer based in{' '}
@@ -56,7 +54,7 @@ export default function Home() {
           initial={{ x: '-100vw' }}
           animate={{ x: 0 }}
           transition={{ delay: 0.8, duration: 0.5 }}
-          className='flex justify-end justify-self-end overflow-hidden'
+          className='flex justify-end justify-self-end'
         >
           <a
             href='https://www.linkedin.com/in/alessiodalise/'
