@@ -1,5 +1,4 @@
 import React from 'react';
-import Arrow from '../components/Arrow';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../firebase.config';
 import Image from 'next/image';
@@ -20,15 +19,6 @@ export async function getStaticProps() {
 const work = ({ items }) => {
   return (
     <>
-      <FullScreenWrapper className='h-screen'>
-        <div className='flex flex-col justify-center items-center h-screen'>
-          <h1 className='relative bottom-20 text-4xl md:text-7xl lg:text-9xl uppercase font-bold '>
-            my work
-          </h1>
-          <Arrow />
-        </div>
-      </FullScreenWrapper>
-
       {items.map((item) => (
         <FullScreenWrapper
           key={item.id}
