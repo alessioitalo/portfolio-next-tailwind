@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 export default function Home() {
   return (
-    <section className='flex flex-col items-center relative h-[80vh]'>
+    <section className='flex flex-col items-center relative h-[80vh] overflow-x-hidden'>
       <div className='w-[90vw] mt-20'>
         <motion.div
           initial={{ opacity: 0 }}
@@ -22,11 +22,11 @@ export default function Home() {
           </h1>
         </motion.div>
         <motion.div
-          // initial={{ visibility: 'hidden', x: '100vw' }}
-          // animate={{ visibility: 'visible', x: 0 }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8, duration: 0.5 }}
+          initial={{ visibility: 'hidden', x: '100vw' }}
+          animate={{ visibility: 'visible', x: 0 }}
+          // initial={{ opacity: 0 }}
+          // animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.3 }}
         >
           <p className='font-ubuntu text-slate-900 dark:text-stone-50 text-bold text-sm sm:text-md xl:text-xl py-2'>
             I am a self-taught web developer based in{' '}
@@ -53,11 +53,11 @@ export default function Home() {
         </motion.div>
 
         <motion.div
-          // initial={{ visibility: 'hidden', x: '-100vw' }}
-          // animate={{ visibility: 'visible', x: 0 }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 0.5 }}
+          initial={{ visibility: 'hidden', x: '-100vw' }}
+          animate={{ visibility: 'visible', x: 0 }}
+          // initial={{ opacity: 0 }}
+          // animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.3 }}
           className='flex justify-end justify-self-end'
         >
           <a
