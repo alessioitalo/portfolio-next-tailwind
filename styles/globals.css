@@ -36,11 +36,13 @@ body{
 }
 
 .navHidden {
-  transform: translateY(-300vh);
+  opacity: 0;
+  transform: translateY(-100vh);
   transition: transform 0.3s linear;
 }
 
 .navVisible {
+  opacity: 1;
   transform: translateY(0);
   transition: transform 0.3s linear;
 }
