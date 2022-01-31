@@ -5,7 +5,7 @@ const MobileNavbar = ({ showMobile, setShowMobile }) => {
   const router = useRouter();
   return (
     <div
-      className={`visible md:hidden  fixed inset-0 z-10 ${
+      className={`visible md:hidden fixed inset-0 z-10 ${
         showMobile ? 'navVisible' : 'navHidden'
       }`}
     >

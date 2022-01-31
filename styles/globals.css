@@ -11,6 +11,10 @@ body{
   min-width: 250px;
 }
 
+#navbar{
+  transition: linear 0.3s;;
+}
+
 .activeLink {
   animation: activeLink 0.2s linear;
 }
@@ -32,7 +36,7 @@ body{
 }
 
 .navHidden {
-  transform: translateY(-100vh);
+  transform: translateY(-300vh);
   transition: transform 0.3s linear;
 }
 

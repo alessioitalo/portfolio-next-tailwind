@@ -1,15 +1,31 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-// import { useState } from 'react';
-// import MobileNavbar from './MobileNavbar';
-// import wave from '../public/wave-light.svg'
+import { useState, useEffect } from 'react';
 
-const Navbar = ({showMobile, setShowMobile}) => {
+const Navbar = ({ showMobile, setShowMobile }) => {
   const router = useRouter();
-  // const [showMobile, setShowMobile] = useState(false);
+  const [solidBg, setSolidBg] = useState(false);
+
+  const changeNavbarColor = () => {
+    if (window.scrollY >= 80) {
+      setSolidBg(true);
+    } else {
+      setSolidBg(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', changeNavbarColor);
+    return () => window.removeEventListener('scroll', changeNavbarColor);
+  });
 
   return (
-    <nav className='text-orange-600 py-5 font-ubuntu'> 
+    <nav
+    id='navbar'
+      className={`text-orange-600 py-5 font-ubuntu ${
+        solidBg ? 'md:bg-stone-200 md:dark:bg-slate-900' : 'transparent'
+      }`}
+    >
       <ul className='hidden md:flex text-xl justify-center uppercase text-orange-600'>
         <li className='mx-5'>
           <Link href='/'>Home</Link>

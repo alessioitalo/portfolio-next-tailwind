@@ -1,5 +1,5 @@
 import React from 'react';
-// import Arrow from '../components/Arrow';
+// import { motion } from 'framer-motion';
 import Skills from '../components/Skills';
 import FullScreenWrapper from '../components/FullScreenWrapper';
 import Image from 'next/image';
@@ -7,8 +7,8 @@ import Image from 'next/image';
 const about = () => {
   return (
     <>
-      <FullScreenWrapper className='h-screen'>
-        <div className='flex flex-col md:flex-row justify-evenly items-center h-screen'>
+      <FullScreenWrapper>
+        <div className='flex flex-col md:flex-row justify-evenly items-center min-h-screen'>
           <div className='md:w-[50vw] flex flex-col justify-center items-center'>
             <div className='h-52 w-52 md:h-64 md:w-64 rounded-full absolute -translate-x-8 bg-stone-200 dark:bg-slate-700'></div>
             <div className='h-52 w-52 md:h-64 md:w-64 relative rounded-full'>
@@ -29,10 +29,10 @@ const about = () => {
               and reusable web interfaces.
             </p>
             <p className='font-ubuntu font-bold py-4'>
-              Strong fundamentals in HTML, CSS, Python and modern
-              JavaScript(ES6), extensive experience with React/NextJs, familiar
-              with Version Control (Git-GitHub) and Content Management
-              (Contentful) systems.
+              I have strong HTML, CSS, Python and modern JavaScript(ES6)
+              fundamentals, extensive experience with React/NextJs and I am
+              familiar with Version Control (Git-GitHub) and Content Management
+              systems (Contentful).
             </p>
             <div></div>
           </div>
