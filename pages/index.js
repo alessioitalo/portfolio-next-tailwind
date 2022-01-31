@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 export default function Home() {
   return (
-    <section className='flex flex-col items-center relative h-[80vh]'>
+    <section className='flex flex-col items-center relative h-[80vh] overflow-hidden'>
       <div className='w-[90vw] mt-20'>
         <motion.div
           initial={{ opacity: 0 }}
