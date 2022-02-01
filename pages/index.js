@@ -24,8 +24,6 @@ export default function Home() {
         <motion.div
           initial={{ visibility: 'hidden', x: '100vw' }}
           animate={{ visibility: 'visible', x: 0 }}
-          // initial={{ opacity: 0 }}
-          // animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.3 }}
         >
           <p className='font-ubuntu text-slate-900 dark:text-stone-50 text-bold text-sm sm:text-md xl:text-xl py-2'>
@@ -44,7 +42,7 @@ export default function Home() {
             <span className='text-orange-600 font-bold'>TailwindCSS</span>.
           </p>
           <div className='flex-flex-col py-2'>
-            <div className='font-ubuntu flex flex-col justify-start py-6 text-xl sm:text-2xl xl:text-3xl md top-8 font-bold uppercase underline'>
+            <div className='font-ubuntu flex flex-col justify-start py-6 text-xl sm:text-2xl xl:text-3xl md top-8 font-bold uppercase underline cursor-pointer'>
               <Link href='/work'>
                 <div className='animate-pulse'>see my work</div>
               </Link>

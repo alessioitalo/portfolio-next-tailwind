@@ -2,13 +2,16 @@ import { useState } from 'react';
 import emailjs from 'emailjs-com';
 import FullScreenWrapper from '../components/FullScreenWrapper';
 import Loading from '../components/Loading';
+import Success from '../components/Success';
+import Error from '../components/Error';
 
 const contact = () => {
   const SERVICE_ID = process.env.NEXT_PUBLIC_SERVICE_ID;
   const USER_ID = process.env.NEXT_PUBLIC_USER_ID;
   const TEMPLATE_ID = process.env.NEXT_PUBLIC_TEMPLATE_ID;
 
-  const [error, setError] = useState(false);
+  const [error, setError] = useState(true);
+  const [success, setSuccess] = useState(true);
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -23,7 +26,7 @@ const contact = () => {
     }));
   };
 
-  const formSubmitHandler = async (e) => {
+  const formSubmitHandler = (e) => {
     e.preventDefault();
     setLoading(true);
     emailjs
@@ -37,23 +40,21 @@ const contact = () => {
         },
         USER_ID
       )
-      .then(
-        (result) => {
-          setLoading(false);
-          console.log(result);
-        },
-        (error) => {
-          setLoading(false);
-          setError(true);
-          console.log(error);
-        }
-      );
+      .then((result) => {
+        console.log(result);
+        setLoading(false);
+        setFormData({ name: '', email: '', message: '' });
+        setSuccess(true);
+      })
+      .catch(() => {
+        setLoading(false);
+        setError(true);
+      });
   };
 
   return (
     <>
       {loading && <Loading />}
-
       <div
         className={`${
           loading && 'fixed top-0 left-0 w-screen h-screen blur-sm z-100'
@@ -64,12 +65,20 @@ const contact = () => {
             <h1 className='uppercase text-3xl md:text-6xl font-bold text-orange-600 text-center w-full'>
               get in touch
             </h1>
-            <p className='font-ubuntu font-bold py-4 text-center text-slate-700 dark:text-stone-50'>Would love to hear from you: I am open to collaboration, freelance work...and constructive feedbacks.</p>
+            <p className='font-ubuntu font-bold py-4 text-center text-slate-700 dark:text-stone-50'>
+              Would love to hear from you: I am open to collaboration, freelance
+              work and feedbacks.
+            </p>
             <form
               className='flex flex-col w-full md:w-1/2 relative mx-auto font-bold'
               onSubmit={formSubmitHandler}
             >
-              <label htmlFor='name' className='uppercase font-bold'>Your Name*</label>
+              {success && <Success setSuccess={setSuccess} />}
+              {error && <Error setError={setError} />}
+
+              <label htmlFor='name' className='uppercase font-bold'>
+                Your Name*
+              </label>
               <input
                 className='font-bold mt-2 mb-5 text-orange-600 rounded bg-transparent outline outline-1 py-1 px-4 outline-orange-600 focus:outline-4'
                 name='name'
@@ -78,7 +87,9 @@ const contact = () => {
                 onChange={inputChangeHandler}
                 required
               />
-              <label htmlFor='email' className='uppercase font-bold'>Your Email*</label>
+              <label htmlFor='email' className='uppercase font-bold'>
+                Your Email*
+              </label>
               <input
                 className='font-bold mt-2 mb-5 text-orange-600 rounded bg-transparent outline outline-1 py-1 px-4 outline-orange-600 focus:outline-4'
                 name='email'
@@ -87,7 +98,9 @@ const contact = () => {
                 onChange={inputChangeHandler}
                 required
               />
-              <label htmlFor='message' className='uppercase font-bold'>Your Message*</label>
+              <label htmlFor='message' className='uppercase font-bold'>
+                Your Message*
+              </label>
               <textarea
                 className='font-bold mt-2 mb-5 text-orange-600 rounded bg-transparent outline outline-1 py-1 px-4 outline-orange-600 focus:outline-4'
                 rows='4'

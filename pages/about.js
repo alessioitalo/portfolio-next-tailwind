@@ -1,5 +1,4 @@
 import React from 'react';
-// import { motion } from 'framer-motion';
 import Skills from '../components/Skills';
 import FullScreenWrapper from '../components/FullScreenWrapper';
 import Image from 'next/image';
