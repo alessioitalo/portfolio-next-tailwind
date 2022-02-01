@@ -53,7 +53,7 @@ const about = () => {
           </p>
         </div>
         <div className=' text-slate-700 dark:text-stone-50 font-ubuntu relative md:text-right'>
-          <div className='h-[60vw] w-[60vw] md:h-72 md:w-72 rounded-full absolute right-0 translate-x-8 md:-translate-x-24 -translate-y-8 bg-stone-200 dark:bg-slate-700 -z-10'></div>
+          <div className='h-[60vw] w-[60vw] md:h-72 md:w-72 rounded-full absolute right-0 translate-x-4 md:-translate-x-24 -translate-y-8 bg-stone-200 dark:bg-slate-700 -z-10'></div>
           <h1 className='uppercase text-2xl md:text-5xl font-bold text-orange-600 font-sans text-center md:text-right'>
             Get to know me
           </h1>
