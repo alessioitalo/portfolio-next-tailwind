@@ -90,7 +90,7 @@ const contact = () => {
               <label htmlFor='message' className='uppercase font-bold'>Your Message*</label>
               <textarea
                 className='font-bold mt-2 mb-5 text-orange-600 rounded bg-transparent outline outline-1 py-1 px-4 outline-orange-600 focus:outline-4'
-                rows='8'
+                rows='4'
                 name='message'
                 value={formData.message}
                 onChange={inputChangeHandler}

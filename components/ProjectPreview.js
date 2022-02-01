@@ -1,7 +1,7 @@
 const ProjectPreview = ({ project }) => {
   return (
     <div className='my-2 md:m-2 font-ubuntu w-full'>
-      <a href={project.live}>
+      <a href={project.live} rel='noopener noreferrer' target='_blank'>
         <div
           style={{ backgroundImage: `url(${project.img})` }}
           className='h-64 bg-no-repeat bg-center bg-cover rounded-t'
@@ -15,12 +15,16 @@ const ProjectPreview = ({ project }) => {
           <a
             className='bg-stone-400 w-1/3 dark:bg-slate-200 p-2 mr-2 text-sm rounded uppercase'
             href={project.source}
+            rel='noopener noreferrer'
+            target='_blank'
           >
             Source Code
           </a>
           <a
             className='bg-stone-400 w-1/3 dark:bg-slate-200 p-2 mr-2 text-sm rounded uppercase'
             href={project.live}
+            rel='noopener noreferrer'
+            target='_blank'
           >
             Live App
           </a>
