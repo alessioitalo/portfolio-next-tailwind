@@ -19,13 +19,13 @@ const Layout = ({ loading, children }) => {
     theme === 'dark' ? (
       <BsFillLightbulbFill
         onClick={themeHandler}
-        className='cursor-pointer fixed top-5 right-20'
+        className='cursor-pointer fixed top-2 right-20'
         size={30}
       />
     ) : (
       <BsFillLightbulbOffFill
         onClick={themeHandler}
-        className='cursor-pointer fixed top-5 right-20'
+        className='cursor-pointer fixed top-2 right-20'
         size={30}
       />
     );
@@ -43,7 +43,6 @@ const Layout = ({ loading, children }) => {
       </Head>
       <div className='fixed inset-0 w-screen h-screen bg-stone-100 dark:bg-slate-800 bg-light dark:bg-dark bg-bottom bg-cover bg-no-repeat -z-10' />
       {loading && <Loading />}
-      {/* <Loading /> */}
       <main className={`text-orange-600 ${loading && 'blur-sm h-screen'}`}>
         <header className='fixed top-0 z-20 w-full '>
           {themeSwitch}

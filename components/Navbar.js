@@ -22,7 +22,7 @@ const Navbar = ({ showMobile, setShowMobile }) => {
   return (
     <nav
     id='navbar'
-      className={`text-orange-600 py-5 font-ubuntu ${
+      className={`text-orange-600 py-2 font-ubuntu ${
         solidBg ? 'md:bg-stone-200 md:dark:bg-slate-900' : 'transparent'
       }`}
     >
@@ -53,7 +53,7 @@ const Navbar = ({ showMobile, setShowMobile }) => {
         </li>
       </ul>
       <div
-        className='md:hidden w-10 h-10 fixed top-6 right-5 cursor-pointer'
+        className='md:hidden w-10 h-10 fixed top-3 right-5 cursor-pointer'
         onClick={() => setShowMobile((show) => !show)}
       >
         <div className={`bg-orange-600 w-10 h-1 ${showMobile && 'toX'}`}></div>

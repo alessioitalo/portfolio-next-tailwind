@@ -8,7 +8,7 @@ const about = () => {
   return (
     <>
       <FullScreenWrapper>
-        <div className='flex flex-col md:flex-row justify-evenly items-center min-h-screen'>
+        <div className='flex flex-col md:flex-row justify-evenly items-center min-h-screen py-20'>
           <div className='md:w-[50vw] flex flex-col justify-center items-center'>
             <div className='h-52 w-52 md:h-64 md:w-64 rounded-full absolute -translate-x-8 bg-stone-200 dark:bg-slate-700'></div>
             <div className='h-52 w-52 md:h-64 md:w-64 relative rounded-full'>
@@ -25,8 +25,7 @@ const about = () => {
               about me
             </h1>
             <p className='font-ubuntu font-bold py-4'>
-              I am a self-taught frontend developer who loves building beautiful
-              and reusable web interfaces.
+              I am a self-taught frontend developer who loves building beautiful web applications.
             </p>
             <p className='font-ubuntu font-bold py-4'>
               I have strong HTML, CSS, Python and modern JavaScript(ES6)
