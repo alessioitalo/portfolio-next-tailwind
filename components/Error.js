@@ -1,7 +1,7 @@
 import { AiFillCloseCircle } from 'react-icons/ai';
 import { motion } from 'framer-motion';
 
-const Error = ({ setError }) => {
+const Error = ({ formSubmitted, setError }) => {
   return (
     <motion.div
       initial={{ x: '100vw' }}
@@ -16,7 +16,9 @@ const Error = ({ setError }) => {
           setError(false);
         }}
       />
-      There was an error. Please try again.
+      {formSubmitted
+        ? 'You may have entered some invalid data. Please check and try again.'
+        : 'There was an error. Please try again.'}
     </motion.div>
   );
 };

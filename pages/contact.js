@@ -10,8 +10,9 @@ const contact = () => {
   const USER_ID = process.env.NEXT_PUBLIC_USER_ID;
   const TEMPLATE_ID = process.env.NEXT_PUBLIC_TEMPLATE_ID;
 
-  const [error, setError] = useState(true);
-  const [success, setSuccess] = useState(true);
+  const [formDataError, setFormDataError] = useState(false);
+  const [serverError, setServerError] = useState(false);
+  const [success, setSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -28,6 +29,14 @@ const contact = () => {
 
   const formSubmitHandler = (e) => {
     e.preventDefault();
+    if (
+      formData.name.length < 2 ||
+      formData.message.length < 2 ||
+      !/\S+@\S+\.\S+/.test(formData.email.toLowerCase())
+    ) {
+      setFormDataError(true)
+      return
+    }
     setLoading(true);
     emailjs
       .send(
@@ -48,7 +57,7 @@ const contact = () => {
       })
       .catch(() => {
         setLoading(false);
-        setError(true);
+        setServerError(true)
       });
   };
 
@@ -74,7 +83,10 @@ const contact = () => {
               onSubmit={formSubmitHandler}
             >
               {success && <Success setSuccess={setSuccess} />}
-              {error && <Error setError={setError} />}
+              {serverError && <Error setError={setServerError} />}
+              {formDataError && (
+                <Error setError={setFormDataError} formSubmitted={true} />
+              )}
 
               <label htmlFor='name' className='uppercase font-bold'>
                 Your Name*
