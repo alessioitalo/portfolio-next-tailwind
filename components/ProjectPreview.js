@@ -29,16 +29,18 @@ const ProjectPreview = ({ project }) => {
             Live App
           </a>
         </span>
-        <h4 className='text-orange-600 font-sans font-bold'>Built with:</h4>
-        <div className='flex flex-wrap'>
-          {project.tech.map((tech, index) => (
-            <span
-              className='bg-stone-400 dark:bg-slate-200 p-1 mt-2 mr-2 text-sm rounded lowercase'
-              key={index}
-            >
-              {tech}
-            </span>
-          ))}
+        <div>
+          <h4 className='text-orange-600 font-sans font-bold'>Built with:</h4>
+          <div className='flex flex-wrap'>
+            {project.tech.map((tech, index) => (
+              <span
+                className='text-stone-500 dark:text-slate-200 mr-2 text-sm rounded lowercase'
+                key={index}
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </div>
