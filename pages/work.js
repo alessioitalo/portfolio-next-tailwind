@@ -1,6 +1,7 @@
 import React from 'react';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../firebase.config';
+import ProjectPreview from '../components/ProjectPreview';
 import Image from 'next/image';
 import FullScreenWrapper from '../components/FullScreenWrapper';
 
@@ -18,37 +19,16 @@ export async function getStaticProps() {
 
 const work = ({ items }) => {
   return (
-    <>
-      {items.map((item) => (
-        <FullScreenWrapper
-          key={item.id}
-          // className='sm:py-36 md:py-20 snap-start h-full font-ubuntu font-bold text-center'
-        >
-          <div className='sm:py-36 md:py-20 snap-start h-full font-ubuntu font-bold text-center'>
-            <h1 className='text-slate-800 dark:text-stone-50 opacity-20 py-10 md:py-1 text-3xl md:text-6xl lg:text-9xl uppercase font-bold '>
-              {item.data.name}
-            </h1>
-            <div className='w-[90vw] h-[25vh] relative mx-auto fill-current'>
-              <Image
-                src={item.data.img}
-                layout='responsive'
-                layout='fill'
-                objectFit='cover'
-                className='rounded'
-              />
-            </div>
-            <p className='p-10 md:px10 md:px-4'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-            <a href={item.data.source}>Source code</a>
-            <a href={item.data.live}>Live App</a>
-          </div>
-        </FullScreenWrapper>
-      ))}
-    </>
+    <FullScreenWrapper>
+      <h1 className='uppercase text-3xl md:text-6xl font-bold text-orange-600 text-center w-full pt-24'>
+        Portfolio
+      </h1>
+      <div className='min-h-screen pt-10 grid grid-cols-1 md:grid-cols-2 md:gap-2 xl:grid-cols-3 text-stone-50 dark:text-slate-700'>
+        {items.map((item) => (
+          <ProjectPreview key={item.id} project={item.data} />
+        ))}
+      </div>
+    </FullScreenWrapper>
   );
 };
 
