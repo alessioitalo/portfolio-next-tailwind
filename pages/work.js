@@ -1,13 +1,14 @@
 import React from 'react';
-import { collection, getDocs } from 'firebase/firestore';
+import { collection, getDocs, query, orderBy } from 'firebase/firestore';
 import { db } from '../firebase.config';
 import ProjectPreview from '../components/ProjectPreview';
-import Image from 'next/image';
+// import Image from 'next/image';
 import FullScreenWrapper from '../components/FullScreenWrapper';
 
 export async function getStaticProps() {
   let items = [];
-  const querySnapshot = await getDocs(collection(db, 'projects'));
+  const q = query(collection(db, 'projects'), orderBy('index', 'asc'))
+  const querySnapshot = await getDocs(q)
   querySnapshot.forEach((doc) => {
     items.push({ id: doc.id, data: doc.data() });
   });

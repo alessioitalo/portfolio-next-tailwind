@@ -4,6 +4,7 @@ import FullScreenWrapper from '../components/FullScreenWrapper';
 import Loading from '../components/Loading';
 import Success from '../components/Success';
 import Error from '../components/Error';
+import { motion } from 'framer-motion';
 
 const contact = () => {
   const SERVICE_ID = process.env.NEXT_PUBLIC_SERVICE_ID;
@@ -34,8 +35,8 @@ const contact = () => {
       formData.message.length < 2 ||
       !/\S+@\S+\.\S+/.test(formData.email.toLowerCase())
     ) {
-      setFormDataError(true)
-      return
+      setFormDataError(true);
+      return;
     }
     setLoading(true);
     emailjs
@@ -57,7 +58,7 @@ const contact = () => {
       })
       .catch(() => {
         setLoading(false);
-        setServerError(true)
+        setServerError(true);
       });
   };
 
@@ -70,7 +71,12 @@ const contact = () => {
         }`}
       >
         <FullScreenWrapper className='sm:py-36 md:py-20 snap-start h-full font-ubuntu font-bold text-center'>
-          <div className='flex flex-col justify-center items-center h-1/2 pt-24'>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.3 }}
+            className='flex flex-col justify-center items-center h-1/2 pt-24'
+          >
             <h1 className='uppercase text-3xl md:text-6xl font-bold text-orange-600 text-center w-full'>
               get in touch
             </h1>
@@ -125,7 +131,7 @@ const contact = () => {
                 Send
               </button>
             </form>
-          </div>
+          </motion.div>
         </FullScreenWrapper>
       </div>
     </>
