@@ -20,7 +20,7 @@ import {
 
 const Skills = () => {
   return (
-    <div className='pt-8 md:pt-20 grid grid-cols-3 grid-rows-5 md:grid-cols-5 md:grid-rows-3 md:px-8 lg:px-24 md:gap-y-12'>
+    <div className='pt-8 md:pt-20 grid grid-cols-3 grid-rows-5 md:grid-cols-5 md:grid-rows-3 md:px-8 lg:px-24 gap-y-12'>
       <div className='flex flex-col justify-center items-center'>
         <FaHtml5 size={30} />
         <span className='text-xs md:text-sm'>HTML</span>

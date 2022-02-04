@@ -43,6 +43,7 @@ const about = () => {
       fifthBlockAnimation.start({
         opacity: 1,
         transition: {
+          delay: 0.5,
           transition: 0.3,
         },
       });
