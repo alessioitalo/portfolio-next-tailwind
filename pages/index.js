@@ -53,8 +53,6 @@ export default function Home() {
         <motion.div
           initial={{ visibility: 'hidden', x: '-100vw' }}
           animate={{ visibility: 'visible', x: 0 }}
-          // initial={{ opacity: 0 }}
-          // animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.3 }}
           className='flex justify-end justify-self-end'
         >

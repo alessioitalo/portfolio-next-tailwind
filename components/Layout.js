@@ -30,16 +30,24 @@ const Layout = ({ loading, children }) => {
       />
     );
 
-
   return (
     <>
       <Head>
         <title>Alessio D&apos;Alise - Software Developer</title>
+        <meta property='og:title' content="Alessio Italo Jr. D'Alise" />
+        <meta property='og:url' content='www.alessioitalo.uk' />
+        <meta property='og:type' content='website' />
         <meta
           name='description'
           content="Alessio Italo Junior D'Alise - Software Developer based in London, UK. "
         />
-        <link rel='icon' href='/favicon.ico' />
+        <meta
+          property='og:image'
+          content='https://firebasestorage.googleapis.com/v0/b/alessioitalo-portfolio.appspot.com/o/profile.jpg?alt=media&token=eb05e5bd-f4de-48a5-b9b4-e5350a6fc5bb'
+        />
+        <meta name='twitter:card' content='summary' />
+        <link rel='shortcut icon' href='/favicon.ico' type='image/x-icon' />
+        <link rel='icon' href='/favicon.ico' type='image/x-icon' />
       </Head>
       <div className='fixed inset-0 w-screen h-screen bg-stone-100 dark:bg-slate-800 bg-light dark:bg-dark bg-bottom bg-cover bg-no-repeat -z-10' />
       {loading && <Loading />}

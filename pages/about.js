@@ -1,14 +1,65 @@
-import React from 'react';
+import { useEffect } from 'react';
 import Skills from '../components/Skills';
 import FullScreenWrapper from '../components/FullScreenWrapper';
 import Image from 'next/image';
+import { useInView } from 'react-intersection-observer';
+import { motion, useAnimation } from 'framer-motion';
 
 const about = () => {
+  const [thirdBlockRef, thirdBlockInView] = useInView();
+  const [fourthBlockRef, fourthBlockInView] = useInView();
+  const [fifthBlockRef, fifthBlockInView] = useInView();
+
+  const thirdBlockAnimation = useAnimation();
+  const fourthBlockAnimation = useAnimation();
+  const fifthBlockAnimation = useAnimation();
+
+  useEffect(() => {
+    if (thirdBlockInView) {
+      thirdBlockAnimation.start({
+        opacity: 1,
+        transition: {
+          delay: 0.3,
+          transition: 0.3,
+        },
+      });
+    }
+  }, [thirdBlockInView]);
+
+  useEffect(() => {
+    if (fourthBlockInView) {
+      fourthBlockAnimation.start({
+        opacity: 1,
+        transition: {
+          delay: 0.5,
+          transition: 0.3,
+        },
+      });
+    }
+  }, [fourthBlockInView]);
+
+  useEffect(() => {
+    if (fifthBlockInView) {
+      fifthBlockAnimation.start({
+        opacity: 1,
+        transition: {
+          transition: 0.3,
+        },
+      });
+    }
+  }, [fifthBlockInView]);
+
   return (
     <>
       <FullScreenWrapper>
-        <div className='flex flex-col md:flex-row justify-evenly items-center min-h-screen py-20'>
-          <div className='md:w-[50vw] flex flex-col justify-center items-center'>
+        <section className='flex flex-col md:flex-row justify-evenly items-center min-h-screen py-20 overflow-x-hidden'>
+          {/* FIRST ANIMATED BLOCK */}
+          <motion.div
+            initial={{ visibility: 'hidden', x: '100vw' }}
+            animate={{ visibility: 'visible', x: 0 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            className='md:w-[50vw] flex flex-col justify-center items-center'
+          >
             <div className='h-52 w-52 md:h-64 md:w-64 rounded-full absolute -translate-x-8 bg-stone-200 dark:bg-slate-700'></div>
             <div className='h-52 w-52 md:h-64 md:w-64 relative rounded-full'>
               <Image
@@ -18,13 +69,21 @@ const about = () => {
                 priority={true}
               />
             </div>
-          </div>
-          <div className='md:w-[50vw] flex flex-col justify-center items-center text-slate-700 dark:text-stone-50 relative md:pr-24'>
+          </motion.div>
+
+          {/* SECOND ANIMATED BLOCK */}
+          <motion.div
+            initial={{ visibility: 'hidden', x: '-100vw' }}
+            animate={{ visibility: 'visible', x: 0 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            className='md:w-[50vw] flex flex-col justify-center items-center text-slate-700 dark:text-stone-50 relative md:pr-24'
+          >
             <h1 className='uppercase text-3xl md:text-6xl font-bold text-orange-600 text-center'>
               about me
             </h1>
             <p className='font-ubuntu font-bold py-4'>
-              I am a self-taught frontend developer who loves building beautiful web applications.
+              I am a self-taught frontend developer who loves building beautiful
+              web applications.
             </p>
             <p className='font-ubuntu font-bold py-4'>
               I have strong HTML, CSS, Python and modern JavaScript(ES6)
@@ -33,11 +92,18 @@ const about = () => {
               systems (Contentful).
             </p>
             <div></div>
-          </div>
-        </div>
+          </motion.div>
+        </section>
       </FullScreenWrapper>
+
       <FullScreenWrapper>
-        <div className=' text-slate-700 dark:text-stone-50 font-ubuntu relative md:text-left'>
+        {/* THIRD ANIMATED BLOCK */}
+        <motion.div
+          ref={thirdBlockRef}
+          initial={{ opacity: 0 }}
+          animate={thirdBlockAnimation}
+          className=' text-slate-700 dark:text-stone-50 font-ubuntu relative md:text-left'
+        >
           <div className='h-[60vw] w-[60vw] md:h-72 md:w-72 rounded-full absolute -translate-x-8 -translate-y-8 md:translate-x-24 bg-stone-200 dark:bg-slate-700 -z-10'></div>
           <h1 className='uppercase text-2xl md:text-5xl font-bold text-orange-600 font-sans text-center md:text-left'>
             How did I get here?
@@ -50,8 +116,13 @@ const about = () => {
             I love writing tidy, clean and reusable code and I enjoy re-creating
             pixel-perfect designs.
           </p>
-        </div>
-        <div className=' text-slate-700 dark:text-stone-50 font-ubuntu relative md:text-right'>
+        </motion.div>
+        <motion.div
+          ref={fourthBlockRef}
+          initial={{ opacity: 0 }}
+          animate={fourthBlockAnimation}
+          className=' text-slate-700 dark:text-stone-50 font-ubuntu relative md:text-right'
+        >
           <div className='h-[60vw] w-[60vw] md:h-72 md:w-72 rounded-full absolute right-0 translate-x-4 md:-translate-x-24 -translate-y-8 bg-stone-200 dark:bg-slate-700 -z-10'></div>
           <h1 className='uppercase text-2xl md:text-5xl font-bold text-orange-600 font-sans text-center md:text-right'>
             Get to know me
@@ -67,15 +138,21 @@ const about = () => {
             As you&apos;d expect from an Italian national, I make great pizzas
             too.
           </p>
-        </div>
+        </motion.div>
       </FullScreenWrapper>
       <FullScreenWrapper>
-        <div className=' text-slate-700 dark:text-stone-50 font-ubuntu flex flex-col h-full justify-evenly'>
+        {/* FIFTH BLOCK ANIMATION */}
+        <motion.div
+          ref={fifthBlockRef}
+          initial={{ opacity: 0}}
+          animate={fifthBlockAnimation}
+          className=' text-slate-700 dark:text-stone-50 font-ubuntu flex flex-col h-full justify-evenly'
+        >
           <h1 className='uppercase text-2xl md:text-5xl font-bold text-orange-600 text-center font-sans'>
             Tools under my belt
           </h1>
           <Skills />
-        </div>
+        </motion.div>
       </FullScreenWrapper>
     </>
   );
