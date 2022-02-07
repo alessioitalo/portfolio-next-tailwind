@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from './Navbar';
+import Footer from './Footer';
 import Head from 'next/head';
 import { useTheme } from 'next-themes';
 import { BsFillLightbulbFill, BsFillLightbulbOffFill } from 'react-icons/bs';
@@ -60,6 +61,7 @@ const Layout = ({ loading, children }) => {
 
         {children}
       </main>
+      <Footer />
     </>
   );
 };

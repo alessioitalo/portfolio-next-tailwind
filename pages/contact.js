@@ -127,8 +127,8 @@ const contact = () => {
                 onChange={inputChangeHandler}
                 required
               ></textarea>
-              <button className='bg-orange-600 text-lg rounded py-2 text-white uppercase'>
-                Send
+                <button className='text-xl md:text-2xl xl:text-3xl p-2 font-bold font-ubuntu border-2 border-orange-600 rounded hover:bg-orange-600 hover:text-stone-50 hover:dark:text-slate-900'>
+                SEND
               </button>
             </form>
           </motion.div>
