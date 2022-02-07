@@ -27,25 +27,25 @@ const Navbar = ({ showMobile, setShowMobile }) => {
       }`}
     >
       <ul className='hidden md:flex text-xl justify-center uppercase text-orange-600'>
-        <li className='mx-5'>
+        <li className='mx-5 hover:scale-110'>
           <Link href='/'>Home</Link>
           {router.pathname === '/' && (
             <div className='bg-orange-600 w-full h-1 activeLink' />
           )}
         </li>
-        <li className='mx-5'>
+        <li className='mx-5 hover:scale-110'>
           <Link href='/work'>Portfolio</Link>
           {router.pathname === '/work' && (
             <div className='bg-orange-600 w-full h-1 activeLink' />
           )}
         </li>
-        <li className='mx-5'>
+        <li className='mx-5 hover:scale-110'>
           <Link href='/about'>About</Link>
           {router.pathname === '/about' && (
             <div className='bg-orange-600 w-full h-1 activeLink' />
           )}
         </li>
-        <li className='mx-5'>
+        <li className='mx-5 hover:scale-110'>
           <Link href='/contact'>Contact Me</Link>
           {router.pathname === '/contact' && (
             <div className='bg-orange-600 w-full h-1 activeLink' />
