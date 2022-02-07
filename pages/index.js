@@ -42,19 +42,18 @@ export default function Home() {
             <span className='text-orange-600 font-bold'>TailwindCSS</span>.
           </p>
           <div className='flex-flex-col py-2'>
-            <div className='font-ubuntu flex flex-col justify-start py-6 text-xl sm:text-2xl xl:text-3xl md top-8 font-bold uppercase underline cursor-pointer'>
+          <div className=''>
               <Link href='/work'>
-                <div className='animate-pulse'>see my work</div>
+                <button className='text-xl md:text-2xl xl:text-3xl p-2 font-bold font-ubuntu border-2 border-orange-600 rounded hover:bg-orange-600 hover:text-stone-50 hover:dark:text-slate-900'>SEE MY WORK</button>
               </Link>
             </div>
           </div>
         </motion.div>
-
         <motion.div
           initial={{ visibility: 'hidden', x: '-100vw' }}
           animate={{ visibility: 'visible', x: 0 }}
           transition={{ delay: 0.5, duration: 0.3 }}
-          className='flex justify-end justify-self-end'
+          className='flex justify-end justify-self-end mt-10 md:mt-6'
         >
           <a
             href='https://www.linkedin.com/in/alessiodalise/'
