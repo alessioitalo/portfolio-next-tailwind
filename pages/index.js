@@ -28,18 +28,18 @@ export default function Home() {
         >
           <p className='font-ubuntu text-slate-900 dark:text-stone-50 text-bold text-sm sm:text-md xl:text-xl py-2'>
             I am a self-taught web developer based in{' '}
-            <span className='text-orange-600 font-bold'>London</span>, and I am
+            <span className='text-orange-600'>London</span>, and I am
             proficient in{' '}
-            <span className='text-orange-600 font-bold'>HTML</span>,{' '}
-            <span className='text-orange-600 font-bold'>CSS</span>,{' '}
-            <span className='text-orange-600 font-bold'>JavaScript</span> and{' '}
-            <span className='text-orange-600 font-bold'>Python</span>.
+            <span className='text-orange-600'>HTML</span>,{' '}
+            <span className='text-orange-600'>CSS</span>,{' '}
+            <span className='text-orange-600'>JavaScript</span> and{' '}
+            <span className='text-orange-600'>Python</span>.
           </p>
           <p className='font-ubuntu text-slate-900 dark:text-stone-50 text-bold text-sm sm:text-md xl:text-xl py-2'>
             Some of my favourite technologies are
-            <span className='text-orange-600 font-bold'> React</span>,{' '}
-            <span className='text-orange-600 font-bold'>NextJS</span>,{' '}
-            <span className='text-orange-600 font-bold'>TailwindCSS</span>.
+            <span className='text-orange-600'> React</span>,{' '}
+            <span className='text-orange-600'>NextJS</span>,{' '}
+            <span className='text-orange-600'>TailwindCSS</span>.
           </p>
           <div className='flex-flex-col py-2'>
           <div className=''>
@@ -59,7 +59,7 @@ export default function Home() {
             href='https://www.linkedin.com/in/alessiodalise/'
             target='_blank'
             rel='noreferrer'
-            className='mx-4 hover:scale-125'
+            className='mx-4 hover:scale-110'
           >
             <BsLinkedin size={40} />
           </a>
@@ -67,7 +67,7 @@ export default function Home() {
             href='https://github.com/alessioitalo'
             target='_blank'
             rel='noreferrer'
-            className='mx-4 hover:scale-125'
+            className='mx-4 hover:scale-110'
           >
             <BsGithub size={40} />
           </a>
@@ -75,7 +75,7 @@ export default function Home() {
             href='https://twitter.com/alessioitalo'
             target='_blank'
             rel='noreferrer'
-            className='mx-4 hover:scale-125'
+            className='mx-4 hover:scale-110'
           >
             <BsTwitter size={40} />
           </a>

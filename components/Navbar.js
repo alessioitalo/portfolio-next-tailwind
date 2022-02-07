@@ -23,7 +23,7 @@ const Navbar = ({ showMobile, setShowMobile }) => {
     <nav
     id='navbar'
       className={`text-orange-600 py-2 h-12 md:h-fit font-ubuntu ${
-        solidBg ? 'bg-stone-200 dark:bg-slate-900' : 'transparent'
+        solidBg ? 'bg-stone-300 dark:bg-slate-900' : 'transparent'
       }`}
     >
       <ul className='hidden md:flex text-xl justify-center uppercase text-orange-600'>

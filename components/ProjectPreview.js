@@ -12,12 +12,12 @@ const ProjectPreview = ({ project }) => {
           {project.name}
         </h1>
         <span>
-          <button className='text-sm md:text-lg p-2 font-bold font-ubuntu border-2 bg-orange-600 border-orange-600 rounded hover:bg-transparent hover:text-orange-600'>
+          <button className='text-sm md:text-lg p-2 font-bold font-ubuntu text-stone-50 border-2 bg-orange-600 border-orange-600 rounded hover:bg-orange-700 hover:border-orange-700'>
             <a href={project.live} rel='noopener noreferrer' target='_blank'>
               Live App
             </a>
           </button>
-          <button className='text-sm md:text-lg p-2 font-bold font-ubuntu border-2 text-orange-600 border-orange-600 rounded hover:bg-orange-600 hover:text-stone-200 hover:dark:text-slate-700 ml-4'>
+          <button className='text-sm md:text-lg p-2 font-bold font-ubuntu border-2 text-orange-600 border-orange-600 rounded hover:bg-stone-300 hover:dark:bg-slate-800 ml-4'>
             <a
               // className='bg-stone-400 w-1/3 dark:bg-slate-200 p-2 mr-2 text-sm rounded uppercase'
               href={project.source}
