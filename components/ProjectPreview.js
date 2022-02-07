@@ -12,22 +12,21 @@ const ProjectPreview = ({ project }) => {
           {project.name}
         </h1>
         <span>
-          <a
-            className='bg-stone-400 w-1/3 dark:bg-slate-200 p-2 mr-2 text-sm rounded uppercase'
-            href={project.source}
-            rel='noopener noreferrer'
-            target='_blank'
-          >
-            Source Code
-          </a>
-          <a
-            className='bg-stone-400 w-1/3 dark:bg-slate-200 p-2 mr-2 text-sm rounded uppercase'
-            href={project.live}
-            rel='noopener noreferrer'
-            target='_blank'
-          >
-            Live App
-          </a>
+          <button className='text-sm md:text-lg p-2 font-bold font-ubuntu border-2 bg-orange-600 border-orange-600 rounded hover:bg-transparent hover:text-orange-600'>
+            <a href={project.live} rel='noopener noreferrer' target='_blank'>
+              Live App
+            </a>
+          </button>
+          <button className='text-sm md:text-lg p-2 font-bold font-ubuntu border-2 text-orange-600 border-orange-600 rounded hover:bg-orange-600 hover:text-stone-200 hover:dark:text-slate-700 ml-4'>
+            <a
+              // className='bg-stone-400 w-1/3 dark:bg-slate-200 p-2 mr-2 text-sm rounded uppercase'
+              href={project.source}
+              rel='noopener noreferrer'
+              target='_blank'
+            >
+              Source Code
+            </a>
+          </button>
         </span>
         <div>
           <h4 className='text-orange-600 font-sans font-bold'>Built with:</h4>
