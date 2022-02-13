@@ -57,9 +57,9 @@ const about = () => {
         </div>
       </section>
       <section className='min-h-screen overflow-x-hidden flex flex-col justify-evenly px-4'>
-        <div className=' text-slate-700 dark:text-stone-50 font-ubuntu relative md:text-left'>
-          <div className='h-[60vw] w-[60vw] md:h-72 md:w-72 rounded-full absolute -translate-x-8 -translate-y-8 md:translate-x-24 bg-stone-200 dark:bg-slate-700 -z-10'></div>
-          <h1 className='uppercase text-2xl md:text-5xl font-bold text-orange-600 font-sans text-center md:text-left'>
+        <div className=' text-slate-700 dark:text-stone-50 font-ubuntu relative md:text-left md:w-1/2 md:pl-24'>
+          <div className='h-44 w-44 md:h-72 md:w-72 rounded-full absolute translate-x-8 -translate-y-8 md:translate-x-24 bg-stone-200 dark:bg-slate-700 -z-10'></div>
+          <h1 className='uppercase text-2xl md:text-5xl font-bold text-orange-600 font-sans text-center md:text-left md:pl-4'>
             How did I get here?
           </h1>
           <p className='font-ubuntu font-bold py-4'>
@@ -71,8 +71,8 @@ const about = () => {
             pixel-perfect designs.
           </p>
         </div>
-        <div className=' text-slate-700 dark:text-stone-50 font-ubuntu relative md:text-right'>
-          <div className='h-[60vw] w-[60vw] md:h-72 md:w-72 rounded-full absolute right-0 translate-x-4 md:-translate-x-24 -translate-y-8 bg-stone-200 dark:bg-slate-700 -z-10'></div>
+        <div className=' text-slate-700 dark:text-stone-50 font-ubuntu relative md:text-right md:w-1/2 md:self-end md:pr-24'>
+          <div className='h-44 w-44 md:h-72 md:w-72 rounded-full absolute right-0 -translate-x-8 md:-translate-x-24 -translate-y-8 bg-stone-200 dark:bg-slate-700 -z-10'></div>
           <h1 className='uppercase text-2xl md:text-5xl font-bold text-orange-600 font-sans text-center md:text-right'>
             Get to know me
           </h1>
