@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className='flex flex-col text-center justify-center items-center font-ubuntu text-xs bg-stone-300 dark:bg-slate-900 py-2'>
       <div className='uppercase font-bold pb-2'>© Alessio Italo Jr. D'Alise {new Date().getFullYear()}</div>
-      <div>
+      <div className='px-6'>
         This Portfolio is a constant work in progress and I will keep updating
         it as I create new projects and I learn new cool stuff.
       </div>
