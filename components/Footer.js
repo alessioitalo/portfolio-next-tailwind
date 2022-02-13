@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className='w-full flex flex-col justify-center items-center font-ubuntu text-xs bg-stone-300 dark:bg-slate-900 py-2'>
+    <footer className='flex flex-col text-center justify-center items-center font-ubuntu text-xs bg-stone-300 dark:bg-slate-900 py-2'>
       <div className='uppercase font-bold pb-2'>© Alessio Italo Jr. D'Alise {new Date().getFullYear()}</div>
       <div>
         This Portfolio is a constant work in progress and I will keep updating
