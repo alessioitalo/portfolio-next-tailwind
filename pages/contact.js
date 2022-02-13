@@ -75,7 +75,7 @@ const contact = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.3 }}
-            className='flex flex-col justify-center items-center h-1/2 pt-24'
+            className='flex flex-col justify-center items-center h-1/2 pt-24 overflow-x-hidden'
           >
             <h1 className='uppercase text-3xl md:text-6xl font-bold text-orange-600 text-center w-full'>
               get in touch
@@ -85,7 +85,7 @@ const contact = () => {
               work and feedbacks.
             </p>
             <form
-              className='flex flex-col w-full md:w-1/2 relative mx-auto font-bold'
+              className='flex flex-col w-full px-2 md:w-1/2 relative mx-auto font-bold'
               onSubmit={formSubmitHandler}
             >
               {success && <Success setSuccess={setSuccess} />}
